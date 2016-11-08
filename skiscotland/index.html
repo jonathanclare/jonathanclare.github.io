@@ -2,6 +2,7 @@
 <html lang="">
     <head>
         <title>Ski Scotland</title>
+        <link rel="icon" href="./snowflake.png">
 
         <meta name="description" content="Ski Scotland">
         <meta name="keywords" content="Ski Scotland">
@@ -57,11 +58,17 @@
             {
                 cursor: pointer;
                 display: inline-block;
-                margin: 0px 10px 0px 10px;
+                margin: 0px 7px 0px 7px;
+                vertical-align: top;
             }
             .menuitem:hover
             {
                 color:#000;
+            }
+            .logo
+            { 
+                margin: 8px 0px 8px 0px;
+                height:30px
             }
             .box
             {
@@ -86,7 +93,7 @@
                 vertical-align:top;
                 margin: 5px;
                 display: inline-block;
-                width: 200px;
+                width: 250px;
             }   
             .thumbnail img 
             {
@@ -149,11 +156,12 @@
     <body>
 
         <div class="menu">
-            <span class="menuitem" onclick="showArea('coe')">Coe</span>
-            <span class="menuitem" onclick="showArea('nevis')">Nevis</span>
-            <span class="menuitem" onclick="showArea('shee')">Shee</span>
-            <span class="menuitem" onclick="showArea('gorm')">Gorm</span>
-            <span class="menuitem" onclick="showArea('lecht')">Lecht</span>
+            <div class="menuitem"><img class="logo" src="./snowflake.png" /></div>
+            <div class="menuitem" onclick="showArea('coe')">Coe</div>
+            <div class="menuitem" onclick="showArea('nevis')">Nevis</div>
+            <div class="menuitem" onclick="showArea('shee')">Shee</div>
+            <div class="menuitem" onclick="showArea('gorm')">Gorm</div>
+            <div class="menuitem" onclick="showArea('lecht')">Lecht</div>
         </div>
 
         <div class="main">
