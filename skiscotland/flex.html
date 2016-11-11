@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <title>Ski Scotland</title>
+        <link rel="icon" href="./snowflake.png">
+
+        <meta name="description" content="Ski Scotland">
+        <meta name="keywords" content="Ski Scotland">
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body
+            {
+                background:#f5f8fa;
+            }
+
+            .wrapper 
+            {
+                font-family: arial;
+                font-size: 14px;
+                color: #66757f;
+                text-align: center;
+
+                padding-top:50px;
+                margin: 0 auto;
+
+                max-width: 1281px;
+            }
+
+            /* List defaults */
+            ul
+            {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            ul a
+            {
+                color:#66757f;
+                text-decoration: none;
+                display: block;
+            }
+            ul a:hover
+            {
+                color:#292e31;
+                background: #f4f9fb;
+            }
+
+            /* Flexbox defaults */
+            .flex-box
+            {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+            }
+
+            /* Stop text selection */
+            .no-user-select
+            {
+                -webkit-touch-callout: none;    
+                -webkit-user-select: none; 
+                -khtml-user-select: none;
+                -moz-user-select: none; 
+                -ms-user-select: none; 
+                user-select: none;
+            }
+
+            /* Box */
+            .box
+            {
+                background-color: #fff;
+                border: 1px solid #e1e8ed;
+                border-radius: 5px;
+                margin:10px;
+                padding:10px;
+            }
+
+            /* Navigation */
+            .nav 
+            {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                height: 46px;
+                line-height: 46px;
+                z-index: 1000;
+                white-space: nowrap;
+
+                background: #fff;
+                border-bottom: 1px solid #e1e8ed;
+
+                -webkit-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+                justify-content: center;
+            }
+            .nav a 
+            {
+                padding: 0px 5px;
+            }
+            .nav img
+            { 
+                padding: 0px 5px;
+                height: 26px;
+                vertical-align: middle;
+            }
+
+            /* Links to external sites */
+            .links 
+            {
+                padding: 0;
+                -webkit-flex-flow: column wrap;
+                flex-flow: column wrap;
+                justify-content: center;
+            }
+            .links a 
+            {
+                padding: 10px;
+                border-bottom: 1px solid #e1e8ed;
+            }
+            .links li:last-of-type a 
+            { 
+                border: none; 
+            }
+
+            /* Piste Map */
+            .pistemap img 
+            {
+                max-width:100%;
+                max-height:100%
+            }
+
+            /* thumbnails */
+            .thumbnails 
+            {
+                flex: auto;
+                -webkit-flex-flow: row wrap;
+                flex-flow: row wrap;
+                justify-content: space-around;
+            }
+            .thumbnails li 
+            { 
+                max-width: 100%;
+                padding:10px;
+            }
+            .thumbnails img 
+            {
+                width:100%;
+                opacity: 1;
+                transition: opacity 0.5s;
+            }
+            .thumbnails img[data-src] 
+            {
+                opacity: 0;
+            }
+            .thumbnails .title 
+            {
+                margin-bottom: 5px;
+            }
+
+            /* Layout */
+            /* smartphones, iPhone, portrait 480x320 phones */
+            .container-1
+            {
+                -webkit-flex-flow: column nowrap;
+                flex-flow:  column nowrap;
+            }
+            .container-2
+            {
+                -webkit-flex-flow: column nowrap;
+                flex-flow:  column nowrap;
+            }
+            .container-3 
+            {
+                -webkit-flex-flow: column nowrap;
+                flex-flow:  column nowrap;
+            }
+            @media screen and (min-width: 321px) 
+            {
+                /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide */
+                body  {background:red;}
+                .nav a, .nav img 
+                {
+                    padding: 0px 10px;
+                }
+            }
+            @media screen and (min-width: 481px) 
+            {
+                /* iPadPortrait */
+                body  {background:green;}
+                .thumbnails li 
+                { 
+                    max-width: 150px;
+                }
+                .nav a, .nav img
+                {
+                    padding: 0px 15px;
+                }
+            }
+            @media screen and (min-width: 641px) 
+            {
+                /* iPadLandscape */
+                body  {background:blue;}
+                .container-2
+                {
+                    -webkit-flex-flow: row nowrap;
+                    flex-flow:  row nowrap;
+                }
+                .container-2 > *
+                {
+                    flex: 1;
+                }
+                .links 
+                {
+                    -webkit-flex-flow: row wrap;
+                    flex-flow: row wrap;
+                }
+                .links a 
+                {
+                    border-bottom:none;
+                    border-right: 1px solid #e1e8ed;
+                }
+                .twitter
+                {
+                    /*max-height:400px;
+                    overflow-y:auto;*/
+                }
+            }
+            @media screen and (min-width: 961px) 
+            {
+                /* laptop */
+                body  {background:purple;}
+                .container-1
+                {
+                    -webkit-flex-flow: row nowrap;
+                    flex-flow: row nowrap;
+                }
+                .container-2
+                {
+                    flex:1;
+                    -webkit-flex-flow: column nowrap;
+                    flex-flow: column nowrap;
+                }
+                .container-3
+                {
+                    flex:2;
+                }
+                .thumbnails li 
+                { 
+                    max-width: 200px;
+                }
+            }
+            @media screen and (min-width: 1025px) 
+            {
+                /* desktop */
+                body  {background:pink;}
+                .links a 
+                {
+                    padding: 10px 20px;
+                }
+            }
+            @media screen and (min-width: 1281px) 
+            {
+                body  {background:brown;}
+                .thumbnails li 
+                { 
+                    max-width: 250px;
+                }
+            }
+            @media screen and (min-width: 1601px) 
+            {
+                /* > widescreen */
+                body  {background:indigo;}
+            }
+
+        </style>
+
+        <script type="application/javascript">
+            window.onload = function () 
+            { 
+                [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) 
+                {
+                    img.setAttribute('src', img.getAttribute('data-src'));
+                    img.onload = function()  {img.removeAttribute('data-src');}
+                });
+            }
+
+            function showArea(area) 
+            {
+                var areas = document.querySelectorAll('.skiarea');
+                for (var i = 0; i < areas.length; i++)
+                {
+                    areas[i].style.display='none';
+                }
+                document.getElementById(area).style.display='block';
+            }
+        </script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </head>
+    <body>
+
+        <div class="wrapper">
+
+            <ul class="nav flex-box no-user-select">  
+                <li><img src="./snowflake.png" /></li>
+                <li><a href="#" onclick="showArea('coe');return false;">Coe</a></li>
+                <li><a href="#" onclick="showArea('nevis');return false;">Nevis</a></li>
+                <li><a href="#" onclick="showArea('shee');return false;">Shee</a></li>
+                <li><a href="#" onclick="showArea('gorm');return false;">Gorm</a></li>
+                <li><a href="#" onclick="showArea('lecht');return false;">Lecht</a></li>
+            </ul>
+
+            <div id="coe" class="skiarea flex-box container-1">
+                <div class="flex-box container-2">                    
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/glencoemountain" data-widget-id="697427516097753089" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @glencoemountain</a></div>
+                    <div class="box"><a class="pistemap" target="_blank" href="./coe.jpg"><img data-src="./coe.jpg"></a></div>
+                </div>
+                <div class="flex-box container-3">
+                    <ul class="flex-box thumbnails box">
+                        <li><div class="title">Main Basin</div><div><a target="_blank" href="http://www.winterhighland.info/cams/glencoe/mainbasin.jpeg"><img data-src="http://www.winterhighland.info/cams/glencoe/mainbasin.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Flypaper</div><div><a target="_blank" href="http://www.winterhighland.info/cams/glencoe/flypaper.jpeg"><img data-src="http://www.winterhighland.info/cams/glencoe/flypaper.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Spring Run</div><div><a target="_blank" href="http://www.winterhighland.info/cams/glencoe/spring.jpeg"><img data-src="http://www.winterhighland.info/cams/glencoe/spring.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Mid Mountain</div><div><a target="_blank" href="http://www.winterhighland.info/cams/glencoe/mid.jpeg"><img data-src="http://www.winterhighland.info/cams/glencoe/mid.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Plateau</div><div><a target="_blank" href="http://www.winterhighland.info/cams/glencoe/access2200.jpeg"><img data-src="http://www.winterhighland.info/cams/glencoe/access2200.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Wall</div><div><a target="_blank" href="http://www.winterhighland.info/cams/glencoe/wall.jpeg"><img data-src="http://www.winterhighland.info/cams/glencoe/wall.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Cliffy</div><div><a target="_blank" href="http://www.winterhighland.info/cams/glencoe/cliffy.jpeg"><img data-src="http://www.winterhighland.info/cams/glencoe/cliffy.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Base</div><div><a target="_blank" href="http://www.winterhighland.info/cams/glencoe/base1200.jpeg"><img data-src="http://www.winterhighland.info/cams/glencoe/base1200.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                    </ul>
+                    <ul class="flex-box links box no-user-select">  
+                        <li><a href="http://www.sais.gov.uk/glencoe/" target="_blank">Avalanche Report</a></li>
+                        <li><a href="http://www.mwis.org.uk/text/WH" target="_blank">Mountain Forecast</a></li>
+                        <li><a href="https://www.google.com/maps/dir/Current+Location/Glencoe+Mountain+Ltd" target="_blank">Directions</a></li>
+                        <li><a href="https://www.facebook.com/GlencoeMountain/" target="_blank">Facebook</a></li>
+                        <li><a href="http://www.glencoemountain.co.uk/" target="_blank">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="nevis" class="skiarea flex-box container-1" style="display:none">
+                <div class="flex-box container-2">                    
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/TheNevisRange" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @TheNevisRange</a></div>
+                    <div class="box"><a class="pistemap" target="_blank" href="./nevis.jpg"><img data-src="./nevis.jpg"></a></div>
+                </div>
+                <div class="flex-box container-3">
+                    <ul class="flex-box thumbnails box">
+                        <li><div class="title">The Goose</div><div><a target="_blank" href="http://www.winterhighland.info/cams/nevisrange/goose2.jpeg"><img data-src="http://www.winterhighland.info/cams/nevisrange/goose2.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">The Goose</div><div><a target="_blank" href="http://www.winterhighland.info/cams/nevisrange/goose.jpeg"><img data-src="http://www.winterhighland.info/cams/nevisrange/goose.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Braveheart</div><div><a target="_blank" href="http://www.winterhighland.info/cams/nevisrange/braveheart.jpeg"><img data-src="http://www.winterhighland.info/cams/nevisrange/braveheart.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Base</div><div><a target="_blank" href="http://webcam.nevisrange.co.uk/image1.jpg"><img data-src="http://webcam.nevisrange.co.uk/image1.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Base</div><div><a target="_blank" href="http://webcam.nevisrange.co.uk/image8.jpg"><img data-src="http://webcam.nevisrange.co.uk/image8.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                    </ul>
+                    <ul class="flex-box links box no-user-select">  
+                        <li><a href="http://www.sais.gov.uk/glencoe/" target="_blank">Avalanche Report</a></li>
+                        <li><a href="http://www.mwis.org.uk/text/WH" target="_blank">Mountain Forecast</a></li>
+                        <li><a href="https://www.google.com/maps/dir/Current+Location/Nevis+Range+Mountain+Resort,+Torlundy,+Fort+William" target="_blank">Directions</a></li>
+                        <li><a href="https://www.facebook.com/NevisRangeSNOW/" target="_blank">Facebook</a></li>
+                        <li><a href="http://www.nevisrange.co.uk/" target="_blank">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="shee" class="skiarea flex-box container-1" style="display:none">
+                <div class="flex-box container-2">                    
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/theglenshee" data-widget-id="697428577235705861" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @theglenshee</a></div>
+                    <div class="box"><a class="pistemap" target="_blank" href="./shee.jpg"><img data-src="./shee.jpg"></a></div>
+                </div>
+                <div class="flex-box container-3">
+                    <ul class="flex-box thumbnails box">
+                        <li><div class="title">Tiger</div><div><a target="_blank" href="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee7.jpg"><img data-src="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee7.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Claybokie</div><div><a target="_blank" href="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee2.jpg"><img data-src="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee2.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Butcharts</div><div><a target="_blank" href="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee5.jpg"><img data-src="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee5.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Beginners Area</div><div><a target="_blank" href="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee0.jpg"><img data-src="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee0.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Sunnyside</div><div><a target="_blank" href="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee1.jpg"><img data-src="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee1.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Meall Odhar</div><div><a target="_blank" href="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee3.jpg"><img data-src="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee3.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Caenlochan</div><div><a target="_blank" href="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee4.jpg"><img data-src="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee4.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Cairnwell</div><div><a target="_blank" href="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee6.jpg"><img data-src="http://www.webcam-hd.com/Images/ski-scotland_glenshee/zooms/ski-scotland_glenshee6.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                    </ul>
+                    <ul class="flex-box links box no-user-select">  
+                        <li><a href="http://www.sais.gov.uk/southern-cairngorms/" target="_blank">Avalanche Report</a></li>
+                        <li><a href="http://www.mwis.org.uk/text/EH" target="_blank">Mountain Forecast</a></li>
+                        <li><a href="https://www.google.com/maps/dir/Current+Location/Glenshee+Ski+Centre" target="_blank">Directions</a></li>
+                        <li><a href="https://www.facebook.com/pages/Glenshee-Ski-Centre/128328777219986" target="_blank">Facebook</a></li>
+                        <li><a href="http://ski-glenshee.co.uk/" target="_blank">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="gorm" class="skiarea flex-box container-1" style="display:none">
+                <div class="flex-box container-2">                    
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/CairngormMtn" data-widget-id="697428322679185408" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @CairngormMtn</a></div>
+                    <div class="box"><a class="pistemap" target="_blank" href="./gorm.jpg"><img data-src="./gorm.jpg"></a></div>
+                </div>
+                <div class="flex-box container-3">
+                    <ul class="flex-box thumbnails box">
+                        <li><div class="title">White Lady</div><div><a target="_blank" href="http://www.winterhighland.info/cams/cairngorm-mountain/lady.jpeg"><img data-src="http://www.winterhighland.info/cams/cairngorm-mountain/lady.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Lower Slopes</div><div><a target="_blank" href="http://www.winterhighland.info/cams/cairngorm-mountain/ssc.jpeg"><img data-src="http://www.winterhighland.info/cams/cairngorm-mountain/ssc.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">Lower White Lady</div><div><a target="_blank" href="http://www.winterhighland.info/cams/cairngorm-mountain/mid.jpeg"><img data-src="http://www.winterhighland.info/cams/cairngorm-mountain/mid.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">View From Inverdruie</div><div><a target="_blank" href="http://www.winterhighland.info/cams/aviemore/cairngorm.jpeg"><img data-src="http://www.winterhighland.info/cams/aviemore/cairngorm.jpeg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                    </ul>
+                    <ul class="flex-box links box no-user-select">  
+                        <li><a href="http://www.sais.gov.uk/northern-cairngorms/" target="_blank">Avalanche Report</a></li>
+                        <li><a href="http://www.mwis.org.uk/text/EH" target="_blank">Mountain Forecast</a></li>
+                        <li><a href="https://www.google.com/maps/dir/Current+Location/CairnGorm+Mountain,+Aviemore" target="_blank">Directions</a></li>
+                        <li><a href="https://www.facebook.com/CairnGormMtn/" target="_blank">Facebook</a></li>
+                        <li><a href="http://www.cairngormmountain.org/" target="_blank">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="lecht" class="skiarea flex-box container-1" style="display:none">
+                <div class="flex-box container-2">                    
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/lecht2090" data-widget-id="697428895252008960" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @lecht2090</a></div>
+                    <div class="box"><a class="pistemap" target="_blank" href="./lecht.jpg"><img data-src="./lecht.jpg"></a></div>
+                </div>
+                <div class="flex-box container-3">
+                    <ul class="flex-box thumbnails box">
+                        <li><div class="title">The Lecht</div><div><a target="_blank" href="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht0.jpg"><img data-src="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht0.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">The Lecht</div><div><a target="_blank" href="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht1.jpg"><img data-src="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht1.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">The Lecht</div><div><a target="_blank" href="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht2.jpg"><img data-src="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht2.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">The Lecht</div><div><a target="_blank" href="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht3.jpg"><img data-src="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht3.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                        <li><div class="title">The Lecht</div><div><a target="_blank" href="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht4.jpg"><img data-src="http://www.trinum.com/ibox/ski-scotland/images/the-lecht/the-lecht4.jpg" onerror="this.src='./no_photo_icon.jpg';"></a></div></li>
+                    </ul>
+                    <ul class="flex-box links box no-user-select">  
+                        <li><a href="http://www.sais.gov.uk/northern-cairngorms/" target="_blank">Avalanche Report</a></li>
+                        <li><a href="http://www.mwis.org.uk/text/EH" target="_blank">Mountain Forecast</a></li>
+                        <li><a href="https://www.google.com/maps/dir/Current+Location/Lecht+Ski+School,+Lecht+Road,+Strathdon,+Aberdeenshire" target="_blank">Directions</a></li>
+                        <li><a href="https://www.facebook.com/Lecht-2090-232608636779207/" target="_blank">Facebook</a></li>
+                        <li><a href="http://www.lecht.co.uk/" target="_blank">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </body>
+</html>
