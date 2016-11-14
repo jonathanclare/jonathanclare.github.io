@@ -15,6 +15,8 @@
             body
             {
                 background:#f5f8fa;
+                margin: 0;
+                padding: 0;
             }
 
             .wrapper 
@@ -24,7 +26,7 @@
                 color: #66757f;
                 text-align: center;
 
-                padding-top:50px;
+                padding-top:55px;
                 margin: 0 auto;
 
                 max-width: 1281px;
@@ -37,13 +39,13 @@
                 margin: 0;
                 padding: 0;
             }
-            ul a
+            li a
             {
                 color:#66757f;
                 text-decoration: none;
                 display: block;
             }
-            ul a:hover
+            li a:hover
             {
                 color:#292e31;
                 background: #f4f9fb;
@@ -88,7 +90,7 @@
                 right: 0;
                 left: 0;
                 height: 46px;
-                line-height: 46px;
+                line-height: 45px;
                 z-index: 1000;
                 white-space: nowrap;
 
@@ -99,15 +101,32 @@
                 flex-flow: row nowrap;
                 justify-content: center;
             }
-            .nav a 
+            .nav a, nav img
             {
-                padding: 0px 5px;
+                padding: 0px 2vw;
             }
             .nav img
             { 
-                padding: 0px 5px;
                 height: 26px;
                 vertical-align: middle;
+            }
+
+            /* Twitter */
+            .twitter
+            {
+
+            }
+
+            /* Piste Map */
+            .pistemap 
+            {                
+
+
+            }
+            .pistemap img 
+            {
+                max-width:100%;
+                height:auto;
             }
 
             /* Links to external sites */
@@ -128,29 +147,22 @@
                 border: none; 
             }
 
-            /* Piste Map */
-            .pistemap img 
-            {
-                max-width:100%;
-                max-height:100%
-            }
-
             /* thumbnails */
             .thumbnails 
             {
-                flex: auto;
                 -webkit-flex-flow: row wrap;
                 flex-flow: row wrap;
-                justify-content: space-around;
             }
             .thumbnails li 
             { 
-                max-width: 100%;
-                padding:10px;
+                flex: auto;
+                width: calc(100% - 1vw);
+                margin: .5vw; 
             }
             .thumbnails img 
             {
-                width:100%;
+                max-width:100%;
+                height:auto;
                 opacity: 1;
                 transition: opacity 0.5s;
             }
@@ -180,29 +192,21 @@
                 -webkit-flex-flow: column nowrap;
                 flex-flow:  column nowrap;
             }
-            @media screen and (min-width: 321px) 
+            @media all and (min-width: 321px) 
             {
                 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide */
                 body  {background:red;}
-                .nav a, .nav img 
-                {
-                    padding: 0px 10px;
-                }
             }
-            @media screen and (min-width: 481px) 
+            @media all and (min-width: 481px) 
             {
                 /* iPadPortrait */
                 body  {background:green;}
                 .thumbnails li 
                 { 
-                    max-width: 150px;
-                }
-                .nav a, .nav img
-                {
-                    padding: 0px 15px;
+                    width: calc(50% - 1vw);
                 }
             }
-            @media screen and (min-width: 641px) 
+            @media all and (min-width: 641px) 
             {
                 /* iPadLandscape */
                 body  {background:blue;}
@@ -227,11 +231,15 @@
                 }
                 .twitter
                 {
-                    /*max-height:400px;
+                    /*max-height:600px;
                     overflow-y:auto;*/
                 }
+                .thumbnails li 
+                { 
+                    width: calc(33.3% - 1vw);
+                }
             }
-            @media screen and (min-width: 961px) 
+            @media all and (min-width: 961px) 
             {
                 /* laptop */
                 body  {background:purple;}
@@ -250,12 +258,24 @@
                 {
                     flex:2;
                 }
-                .thumbnails li 
-                { 
-                    max-width: 200px;
+                .pistemap 
+                {      
+                    order:1;          
+                }
+                .twitter
+                {
+                    order:2;
+                }
+                .links 
+                {      
+                    order:1;          
+                }
+                .thumbnails
+                {
+                    order:2;
                 }
             }
-            @media screen and (min-width: 1025px) 
+            @media all and (min-width: 1025px) 
             {
                 /* desktop */
                 body  {background:pink;}
@@ -264,15 +284,11 @@
                     padding: 10px 20px;
                 }
             }
-            @media screen and (min-width: 1281px) 
+            @media all and (min-width: 1281px) 
             {
                 body  {background:brown;}
-                .thumbnails li 
-                { 
-                    max-width: 250px;
-                }
             }
-            @media screen and (min-width: 1601px) 
+            @media all and (min-width: 1601px) 
             {
                 /* > widescreen */
                 body  {background:indigo;}
@@ -297,7 +313,7 @@
                 {
                     areas[i].style.display='none';
                 }
-                document.getElementById(area).style.display='block';
+                document.getElementById(area).style.display='flex';
             }
         </script>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -317,8 +333,8 @@
 
             <div id="coe" class="skiarea flex-box container-1">
                 <div class="flex-box container-2">                    
-                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/glencoemountain" data-widget-id="697427516097753089" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @glencoemountain</a></div>
-                    <div class="box"><a class="pistemap" target="_blank" href="./coe.jpg"><img data-src="./coe.jpg"></a></div>
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/glencoemountain" data-widget-id="697427516097753089" data-tweet-limit="3" data-chrome="nofooter noborders noscrollbar transparent">Tweets by @glencoemountain</a></div>
+                    <div class="box pistemap"><a target="_blank" href="./coe.jpg"><img data-src="./coe.jpg"></a></div>
                 </div>
                 <div class="flex-box container-3">
                     <ul class="flex-box thumbnails box">
@@ -343,8 +359,8 @@
 
             <div id="nevis" class="skiarea flex-box container-1" style="display:none">
                 <div class="flex-box container-2">                    
-                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/TheNevisRange" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @TheNevisRange</a></div>
-                    <div class="box"><a class="pistemap" target="_blank" href="./nevis.jpg"><img data-src="./nevis.jpg"></a></div>
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/TheNevisRange" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="nofooter noborders noscrollbar transparent">Tweets by @TheNevisRange</a></div>
+                    <div class="box pistemap"><a target="_blank" href="./nevis.jpg"><img data-src="./nevis.jpg"></a></div>
                 </div>
                 <div class="flex-box container-3">
                     <ul class="flex-box thumbnails box">
@@ -366,8 +382,8 @@
 
             <div id="shee" class="skiarea flex-box container-1" style="display:none">
                 <div class="flex-box container-2">                    
-                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/theglenshee" data-widget-id="697428577235705861" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @theglenshee</a></div>
-                    <div class="box"><a class="pistemap" target="_blank" href="./shee.jpg"><img data-src="./shee.jpg"></a></div>
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/theglenshee" data-widget-id="697428577235705861" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="nofooter noborders noscrollbar transparent">Tweets by @theglenshee</a></div>
+                    <div class="box pistemap"><a target="_blank" href="./shee.jpg"><img data-src="./shee.jpg"></a></div>
                 </div>
                 <div class="flex-box container-3">
                     <ul class="flex-box thumbnails box">
@@ -392,8 +408,8 @@
 
             <div id="gorm" class="skiarea flex-box container-1" style="display:none">
                 <div class="flex-box container-2">                    
-                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/CairngormMtn" data-widget-id="697428322679185408" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @CairngormMtn</a></div>
-                    <div class="box"><a class="pistemap" target="_blank" href="./gorm.jpg"><img data-src="./gorm.jpg"></a></div>
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/CairngormMtn" data-widget-id="697428322679185408" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="nofooter noborders noscrollbar transparent">Tweets by @CairngormMtn</a></div>
+                    <div class="box pistemap"><a target="_blank" href="./gorm.jpg"><img data-src="./gorm.jpg"></a></div>
                 </div>
                 <div class="flex-box container-3">
                     <ul class="flex-box thumbnails box">
@@ -414,8 +430,8 @@
 
             <div id="lecht" class="skiarea flex-box container-1" style="display:none">
                 <div class="flex-box container-2">                    
-                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/lecht2090" data-widget-id="697428895252008960" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @lecht2090</a></div>
-                    <div class="box"><a class="pistemap" target="_blank" href="./lecht.jpg"><img data-src="./lecht.jpg"></a></div>
+                    <div class="box twitter"><a class="twitter-timeline" href="https://twitter.com/lecht2090" data-widget-id="697428895252008960" data-widget-id="697422187578392576" data-tweet-limit="3" data-chrome="nofooter noborders noscrollbar transparent">Tweets by @lecht2090</a></div>
+                    <div class="box pistemap"><a target="_blank" href="./lecht.jpg"><img data-src="./lecht.jpg"></a></div>
                 </div>
                 <div class="flex-box container-3">
                     <ul class="flex-box thumbnails box">
