@@ -30,20 +30,21 @@ body
     display: flex;
     flex-flow: row nowrap;
 }
+.section
+{
+    margin: 0 auto;
+    max-width:1200px;
+}
 .screenshots
 {
     flex-flow: row wrap;
+    justify-content:center;
 }
 .screenshots > div
 {
     margin:10px;
     border:solid 1px #ccc;
-    flex:0 1 250px;
-}
-.section
-{
-    margin: 0 auto;
-    max-width:1000px;
+    flex:1 1 250px;
 }
 
 
@@ -401,11 +402,11 @@ body
     }
 
     /* Section */
-    .section
+   /* .section
     {
         flex-flow: row nowrap;
         padding: 3rem 30px; 
-    }
+    }*/
     .section-info
     {
         flex: 1 1 auto; /* Fixes text overflow bug in IE11 */ 
