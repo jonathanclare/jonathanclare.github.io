@@ -30,6 +30,22 @@ body
     display: flex;
     flex-flow: row nowrap;
 }
+.screenshots
+{
+    flex-flow: row wrap;
+}
+.screenshots > div
+{
+    margin:10px;
+    border:solid 1px #ccc;
+    flex:0 1 250px;
+}
+.section
+{
+    margin: 0 auto;
+    max-width:1000px;
+}
+
 
 /* Prevent tap highlight and text selection */
 .no-select 
@@ -135,10 +151,10 @@ body
 }
 .section
 {
-    flex-flow: column nowrap;
+   /* flex-flow: column nowrap;
     margin: 0 auto;
     max-width:1000px;
-    padding: 3rem 0; 
+    padding: 3rem 0; */
 }
 .section-content
 {
