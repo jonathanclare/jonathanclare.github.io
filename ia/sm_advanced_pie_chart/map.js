@@ -1,0 +1,71 @@
+{
+	"template":"Single Map (HTML Edition)",
+	"version":"6.7.1_b1,635 (2013-09-04 1449)",
+	"boundingBox":"-147478.26 6952575.23 -82307.14 7066585.9",
+	"layers":[
+	{
+		"type":"base-layer",
+		"id":"_Wards_centoids_nottinghamshire.shp1",
+		"name":"Wards",
+		"geometry":"point",
+		"url":"_Wards_centoids_nottinghamshire.shp1.js",
+		"visible":true,
+		"symbolSize":15,
+		"fillColor":"#ffffff",
+		"fillOpacity":0.8,
+		"borderColor":"#cccccc",
+		"borderThickness":1,
+		"showLabels":false,
+		"minLabelExtent":0,
+		"maxLabelExtent":1000000,
+		"iconPath":"",
+		"showDataTips":true,
+		"showInLayerList":true
+	},
+	{
+		"type":"contextual-layer",
+		"id":"contextualLayer1",
+		"name":"Local Authorities",
+		"geometry":"polygon",
+		"url":"contextualLayer1.js",
+		"visible":true,
+		"symbolSize":10,
+		"fillColor":"#FFA200",
+		"fillOpacity":0,
+		"borderColor":"#FFA200",
+		"borderThickness":1.5,
+		"showLabels":false,
+		"minLabelExtent":0,
+		"maxLabelExtent":1000000,
+		"iconPath":"",
+		"showDataTips":false,
+		"showInLayerList":true
+	},
+	{
+		"type":"contextual-layer",
+		"id":"contextualLayer2",
+		"name":"Towns",
+		"geometry":"point",
+		"url":"contextualLayer2.js",
+		"visible":false,
+		"symbolSize":10,
+		"fillColor":"#ffff00",
+		"fillOpacity":1,
+		"borderColor":"#333333",
+		"borderThickness":1,
+		"showLabels":false,
+		"minLabelExtent":0,
+		"maxLabelExtent":1000000,
+		"iconPath":"",
+		"showDataTips":true,
+		"showInLayerList":true
+	},
+	{
+		"type":"google-layer",
+		"id":"dsad3ee9e0-d20b-442e-8afb-112d9eafb519",
+		"geometry":"image",
+		"apiKey":"",
+		"mapType":"hybrid"
+	}
+	]
+}
