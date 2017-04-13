@@ -5,10 +5,10 @@
 	"layers":[
 	{
 		"type":"base-layer",
-		"id":"_local_authorities.shp1",
+		"id":"local_authorities.shp1",
 		"name":"Local Authorities",
 		"geometry":"polygon",
-		"url":"_local_authorities.shp1.js",
+		"url":"local_authorities.shp1.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",

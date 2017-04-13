@@ -5,10 +5,10 @@
 	"layers":[
 	{
 		"type":"base-layer",
-		"id":"_Wards_Norfolk.shp1",
+		"id":"Wards_Norfolk.shp1",
 		"name":"Wards",
 		"geometry":"polygon",
-		"url":"_Wards_Norfolk.shp1.js",
+		"url":"Wards_Norfolk.shp1.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",
@@ -24,10 +24,10 @@
 	},
 	{
 		"type":"base-layer",
-		"id":"_Wards_Centoids_Norfolk.shp2",
+		"id":"Wards_Centoids_Norfolk.shp2",
 		"name":"Wards",
 		"geometry":"point",
-		"url":"_Wards_Centoids_Norfolk.shp2.js",
+		"url":"Wards_Centoids_Norfolk.shp2.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",

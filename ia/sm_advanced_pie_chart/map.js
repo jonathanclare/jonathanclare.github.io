@@ -5,10 +5,10 @@
 	"layers":[
 	{
 		"type":"base-layer",
-		"id":"_Wards_centoids_nottinghamshire.shp1",
+		"id":"Wards_centoids_nottinghamshire.shp1",
 		"name":"Wards",
 		"geometry":"point",
-		"url":"_Wards_centoids_nottinghamshire.shp1.js",
+		"url":"Wards_centoids_nottinghamshire.shp1.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",

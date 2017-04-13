@@ -5,10 +5,10 @@
 	"layers":[
 	{
 		"type":"base-layer",
-		"id":"_Wards-nottinghamshire.shp1",
+		"id":"Wards-nottinghamshire.shp1",
 		"name":"Wards",
 		"geometry":"polygon",
-		"url":"_Wards-nottinghamshire.shp1.js",
+		"url":"Wards-nottinghamshire.shp1.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",
@@ -24,10 +24,10 @@
 	},
 	{
 		"type":"base-layer",
-		"id":"_local_authorities.shp2",
+		"id":"local_authorities.shp2",
 		"name":"Local Authorities",
 		"geometry":"polygon",
-		"url":"_local_authorities.shp2.js",
+		"url":"local_authorities.shp2.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",

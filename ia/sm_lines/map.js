@@ -5,10 +5,10 @@
 	"layers":[
 	{
 		"type":"base-layer",
-		"id":"_Roads_Edinburgh.shp1",
+		"id":"Roads_Edinburgh.shp1",
 		"name":"Roads",
 		"geometry":"line",
-		"url":"_Roads_Edinburgh.shp1.js",
+		"url":"Roads_Edinburgh.shp1.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",
