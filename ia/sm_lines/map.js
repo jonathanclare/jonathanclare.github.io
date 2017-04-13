@@ -23,11 +23,17 @@
 		"showInLayerList":true
 	},
 	{
-		"type":"google-layer",
-		"id":"dsf1711b12-06a6-4b02-a1c5-5fa4e5b54336",
+		"type":"ags-layer",
+		"id":"wms-1996286122",
+		"name":"World Physical Map",
 		"geometry":"image",
-		"apiKey":"",
-		"mapType":"physical"
+		"visible":true,
+		"url":"https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/export?",
+		"layers":"0",
+		"srs":"102100",
+		"params":"",
+		"tile":true,
+		"showInLayerList":true
 	}
 	]
 }

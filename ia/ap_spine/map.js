@@ -80,11 +80,17 @@
 		"showInLayerList":true
 	},
 	{
-		"type":"google-layer",
-		"id":"dsd92bf603-10c7-4c2b-8f71-07abdabe6a74",
+		"type":"ags-layer",
+		"id":"wms-1996286122",
+		"name":"World Physical Map",
 		"geometry":"image",
-		"apiKey":"",
-		"mapType":"hybrid"
+		"visible":true,
+		"url":"https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/export?",
+		"layers":"0",
+		"srs":"102100",
+		"params":"",
+		"tile":true,
+		"showInLayerList":true
 	}
 	]
 }

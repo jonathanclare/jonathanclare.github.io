@@ -7,7 +7,7 @@
 
 <meta name="description" content="This report is powered by InstantAtlas™ Data Visualization &amp; Presentation Software" />
 <!--
-					Copyright (C) 2012 Geowise Ltd
+					Copyright (C) 2014 Geowise Ltd
 					All Rights Reserved. The following is Source Code and is subject to all
 					restrictions on such code as contained in the End User License Agreement
 					accompanying this product.
@@ -47,20 +47,26 @@
 						</div>
 </noscript>
 <a href="http://www.instantatlas.com" style="position:absolute;top:-1000px;left:-1000px;">Powered By InstantAtlas™</a>
+<div class="ia-report-loading" id="ia-report-progress"/>
 </div>
+<script src="jquery-min.js"> </script>
 <script src="ia-min.js"> </script>
 <script src="custom.js"> </script>
 <script>
+<!--
+					
 						if (typeof jQuery == 'undefined') window.location = "./atlas-unsupported.html";
 						else
 						{
 							var $j = jQuery.noConflict();
 							$j(document).ready(function()
 							{
-								if (ia.supportsCanvas()) ia.init("ia-report-container",onIAReportComplete);
+								if (ia.supportsCanvas()) iaInitReport();
 								else window.location = "./atlas-unsupported.html";
 							});
 						}
-                    </script>
+					
+					-->
+</script>
 </body>
 </html>

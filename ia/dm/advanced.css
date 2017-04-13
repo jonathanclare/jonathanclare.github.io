@@ -121,6 +121,20 @@ canvas
 	-o-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
 	box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
 }
+/*------------------- Thumbnail -------------------*/
+.ia-export-thumbnail
+{
+	border: 1px solid #DCDCDC; /** Thumbnail. */
+	width:210px;
+}
+.ia-export-thumbnail:hover
+{	
+	border: 1px solid #BBBBBB; /** Thumbnail. */
+}
+.ia-share-text
+{
+	margin: 12px 0px 2px 0px;
+}
 /*------------------- Report -------------------*/
 .ia-report
 {	
@@ -141,7 +155,7 @@ canvas
 .ia-report-loading
 {		
 	position:absolute; /** Loading screen */
-	filter:alpha(opacity=30);-khtml-opacity:0.3;-moz-opacity:0.3;opacity:0.3;   
+	filter:alpha(opacity=40);-khtml-opacity:0.4;-moz-opacity:0.4;opacity:0.4;   
 	top:0%;left:0%;width:100%;height:100%;z-index:999999;
 	background-color: #ffffff;
 	background-image: url(busy.gif);
@@ -168,26 +182,12 @@ canvas
 	position:absolute; /** Widget */
 	overflow:hidden;
 }
-/*------------------- Dragger -------------------*/
-.ia-dragger 
-{	
-	position:absolute; /** Dragger */
-	border-width:2px;
-	border-style:solid; 
-	border-color:#ff6c00;
-	visibility:hidden;
-}
-.ia-dragger-busy 
-{
-	position:absolute; /** Blocks mouse interaction when busy */
-	top:0%;left:0%;width:100%;height:100%;z-index:1000;
-}
 /*------------------- Panel  -------------------*/
 .ia-panel
 { 
 	/*overflow:hidden;*/ /** Panel */
-	width:100%;
-	height:100%;
+	/*width:100%;
+	height:100%;*/
 }
 .ia-popup-panel
 {
@@ -201,8 +201,10 @@ canvas
 	white-space: pre-wrap;      /* CSS3 */   
 	white-space: -moz-pre-wrap; /* Firefox */    
 	white-space: -pre-wrap;     /* Opera <7 */   
-	white-space: -o-pre-wrap;   /* Opera 7 */    
-	word-wrap: break-word;      /* IE */
+	white-space: -o-pre-wrap;   /* Opera 7 */   
+	overflow:hidden;
+	text-overflow:ellipsis;
+	/*word-wrap: break-word;*/      /* IE */
 }
 .ia-panel-content
 {	
@@ -275,7 +277,7 @@ canvas
 {
 	outline:none; /** Button - focus */
 }
-.menuButton, #dataButton, #dataButton2, #dataButton3, #dataButton4, #filterButton,  #filterButton2, #geographyButton
+.menuButton, #ia-widget-dataButton, #ia-widget-dataButton2, #ia-widget-dataButton3, #ia-widget-dataButton4, #ia-widget-filterButton,  #ia-widget-filterButton2, #ia-widget-geographyButton
 {
 	background-image:url(arrow_down_white.png); /** Menu buttons */
 	background-repeat:no-repeat;
@@ -315,6 +317,10 @@ canvas
 	height:100%;
 	position:absolute;
 }
+.ia-chart-limits
+{
+	border-style: solid; /** Chart Limits */
+}
 .ia-chart-vertical-axis 
 {
 	font-family:Verdana; 
@@ -342,6 +348,13 @@ canvas
 	overflow-x:auto;
 	overflow-y:auto;
 }
+/*------------------- Area breakdown pie chart component -------------------*/
+.ia-area-breakdown-pie-chart
+{
+	width:100%; /** Area breakdown pie chart component */
+	height:100%;
+	padding:20px;
+}
 /*------------------- Map -------------------*/
 .ia-map
 {
@@ -353,12 +366,33 @@ canvas
 .ia-map-copyright	
 {
 	position:absolute; /** Map copyright */
-	filter:alpha(opacity=60);-khtml-opacity:0.6;-moz-opacity:0.6;opacity:0.6;         
+	filter:alpha(opacity=60);-khtml-opacity:0.6;-moz-opacity:0.6;opacity:0.6;
+	cursor:pointer;	
+}
+.ia-esri-logo	
+{
+	position:absolute; /** ESRI logo */
+	right: 0.0px; 
+	bottom: 0.0px; 
 }
 /*------------------- Metadata -------------------*/
 .ia-metadata-scrollbox
 {
 	width:100%; /** Metadata scroll box */
+	height:100%; 
+	overflow-x:auto;
+	overflow-y:auto;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-o-user-select: text;
+	user-select: text;
+	cursor:text;
+}
+/*------------------- Textbox -------------------*/
+.ia-textbox-scrollbox
+{
+	width:100%; /** Textbox scroll box */
 	height:100%; 
 	overflow-x:auto;
 	overflow-y:auto;
@@ -484,20 +518,20 @@ canvas
 	-moz-user-select: text;
 	-o-user-select: text;
 	user-select: text;*/	
-	padding-right:10px;	
-	padding-left:10px;
+	padding-right:5px;	
+	padding-left:5px;
 }
 .ia-table-header.sort-asc
 {
 	background-image:url(table_sort_asc.png); /** Data table header sort button ascending */ 		
-	padding-right:10px;	
-	padding-left:10px;
+	padding-right:5px;	
+	padding-left:5px;
 }
 .ia-table-header.sort-desc
 {
-	background-image:url(table_sort_desc.png); /** Data table header sort button descending */ 	
-	padding-right:10px;	
-	padding-left:10px;
+	background-image:url(table_sort_desc.png); /** Data table header sort button descending */ 
+	padding-right:5px;	
+	padding-left:5px;
 }
 .ia-table-cell
 {		
@@ -506,19 +540,23 @@ canvas
 	white-space: -moz-pre-wrap; /* Firefox */    
 	white-space: -pre-wrap;     /* Opera <7 */   
 	white-space: -o-pre-wrap;   /* Opera 7 */    
-	word-wrap: break-word;      /* IE */
+	overflow:hidden;
+	text-overflow:ellipsis;
+	/*word-wrap: break-word;*/      /* IE */
 	/*-webkit-user-select: text;
 	-khtml-user-select: text;
 	-moz-user-select: text;
 	-o-user-select: text;
 	user-select: text;*/	
-	padding-right:10px;	
-	padding-left:10px;
+	padding-right:5px;	
+	padding-left:5px;
 }
 .ia-table-header-corner
 {
 	position:absolute; /** Table header corner  */ 
 	right:0;top:0;
+	padding-right:0px;	
+	padding-left:0px;
 }
 .ia-table-notes 
 { 
@@ -558,14 +596,16 @@ canvas
 	white-space: -moz-pre-wrap; /* Firefox */    
 	white-space: -pre-wrap;     /* Opera <7 */   
 	white-space: -o-pre-wrap;   /* Opera 7 */    
-	word-wrap: break-word;      /* IE */
+	overflow:hidden;
+	text-overflow:ellipsis;
+	/*word-wrap: break-word;*/      /* IE */
 	/*-webkit-user-select: text;
 	-khtml-user-select: text;
 	-moz-user-select: text;
 	-o-user-select: text;
 	user-select: text;*/	
-	padding-right:10px;	
-	padding-left:10px;
+	padding-right:5px;	
+	padding-left:5px;
 }
 .ia-profile-theme-expand 
 {
@@ -776,6 +816,7 @@ canvas
 	position:relative; /** Explorer scroll box container */
 	overflow-x:auto;
 	overflow-y:auto;	
+	-webkit-overflow-scrolling: touch;
 }
 .ia-explorer-tree
 {
@@ -827,9 +868,9 @@ canvas
 .ia-explorer-selected-item
 {
 	font-weight:bold; /* Explorer item that has been selected. */
-	border-color:#cccccc;
+	/*border-color:#cccccc;
 	border-width: 1px;
-	border-style: dotted;
+	border-style: solid;*/
 }
 .ia-filter-explorer-selected-item
 {
@@ -890,9 +931,9 @@ canvas
 {
 	width:100%; /** Legend label */ 	
 }
-.ia-legend-item
+.ia-legend-item-interactive
 {
-	cursor:pointer; /** Legend item */
+	cursor:pointer; /** Legend item interactive */
 }
 .ia-legend-label
 {
@@ -944,6 +985,11 @@ canvas
 	height:37px;
 }
 .ia-map-toolbar
+{
+	position:absolute; /** Map toolbar */
+	visibility: hidden;
+}
+.ia-google-map-toolbar
 {
 	position:absolute; /** Map toolbar */
 	visibility: hidden;
@@ -1135,9 +1181,21 @@ canvas
 /*------------------- Print -------------------*/
 .ia-print-bar
 {
-	width:140px; /** Print menu */
+	width:300px; /** Print menu */
 	margin:auto;
 	padding:5px;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-o-user-select: none;
+	user-select: none;
+}
+.ia-drag-btn	
+{
+	background-repeat:no-repeat; /** Print menu drag button */
+	background-position:center right;  
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAoCAYAAACIC2hQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QELECA0U7u/UQAAA2VJREFUWMPtmE9P60YUxc/4fxIEqYDiSKGwYIVgi4LYIkvord6+q36Afqu36h4klqgs2FSxQIQoAsuFoMQGhQjhxDae201tmRJDGkL6Xh+zSTxX8fw098y5dwJ8jI/xMb6vwbIC+/v7f4Rh+CMRcSJ62yKMQRCEgiRJXwzD+DUd29vbYzs7O68uIGUFwjD8qVKpzGqahreCiqKIZrOJ09PT+X/GhoF8ERTAY6FQgKqqY0mdoiggomjU3wtZASIC53xsGiOiN2VG+FYO0wfodwsqjfuFRATGWFbsc6PR+HNlZQUAYFkWTNOEqqqveuxEQXVdzy8tLeXj53K5jFKpNJTHjjX1juPg4OAAnucNjMuyDFmWE6uSZRmapkGSJARBEE1Eo47joFqtIggCHB0d4fb29sWSmt71UqmE7e3t99dop9NBtVpNl1+cn58DAGZnZ1+ViqIoUBTl/UDjFJqm+Sx2d3c3NOy729PfXRE2NjZQLBYzYQfJIIoiRFEExhgcx8Hh4eH7+2g+n8f6+jpkWc6EfXh4SOb6/T7a7TY8zwMRodfrod1uT8bwc7kcKpVKJuzNzQ3CMES/34dlWTg5OQHnHIwxEBGiKJpcZXoJttfrwfM81Go1NJvNROMAMD8/j83NzdFAGWMQRXFk2EGafXx8hOu6SfvIGAPnHIVCAeVyebRTLwhC4fr6Om54/zXwzMwMgiDINP+x1XpRFH87Pj7+YdCdiYg+LSwsqFk7HpfROCtZ+iMiCIKATqeDq6ureI4xxmhoUMMwfsmKNRqN1vLy8oIkSQMXj9Pa7/dRq9Xgum6mvIgI3W4X9Xp9/IYfdz+DGpD42fd9WJYF13UToK+uH+Wco9vt4vLy8skuP9slSQJjDMViEaurq6Pd618aFxcXrcXFxYGpj0F93wfn/Mmup7+rqgpBENINyhfG2M9jTb1pmtB1HVmggiBA07QngGlNpuUyrCRGAlUU5ZnHpmHSn8PM93q9zAP3JtC0x0ZRBF3Xk2rkui583wcRYW5uDrlcLimj9/f3icdOT08nFevs7Ay2batjB017bBAEMAwjAa3X63AcB1EUYWtrKwG1bRuNRgMAsLa2loC2Wi3Ytp2bmpr6/Zv5x253d5d9tXCcc0ZE7D/x0RHKuDzxe/0ItwSO/9P4CwZlyl1nmBK9AAAAAElFTkSuQmCC);
+	border-radius:2px;
 }
 .ia-print-btn	
 {
@@ -1166,6 +1224,75 @@ canvas
 	{
 		display:none;
 	}
+    .ia-report-printmode
+    {	
+	    box-shadow: none; 
+    }
+}
+.ia-event-blocker 
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999999;
+    display: none;
+    background-color: #ffffff;
+    opacity: 0.01;
+}
+.ia-drag-panel 
+{
+    position: absolute;
+    border: 2px solid #000000;
+    display: none;
+}
+.ia-drag-panel-fill 
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
+    background-color: #000000;
+}
+.ia-drag-panel-btn-bar 
+{
+    position: absolute;
+    white-space: nowrap;
+    top: -33px;
+    right: -2px;
+    padding: 0px;
+    background-color: #000000;
+}
+.ia-drag-panel-btn 
+{
+    width: 30px;
+    height: 30px;
+	background-position:center center;  
+    background-repeat: no-repeat;
+    font-size: 18.0px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 3px 0px 3px;
+    opacity:0.8;
+}
+.ia-drag-panel-btn:hover 
+{
+    opacity:1;
+}
+.ia-drag-panel-btn-remove 	
+{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90CBwkyDRlz3csAAACjSURBVEjH7ZSxDYMwEEW/UJZIlTItNXMwJmKAFGxAF6XIANCkQrTOS3MolgURIrFI4Se5uW/ft+58lhKJaAAnoAduQD6j56YNwHmLwYU3HVB4WmGxiftSnsMHj1HSU1Im6SipAkrTKovJ9ly3lqkBnHfTh60JBzTf9iI0+V1yz6SdMWjXnM3+4bnGK1HUJgN1kLyz9x/OgAPq3QZtv68ikVjNC2HnXj/2fIhOAAAAAElFTkSuQmCC);
+}
+.ia-drag-panel-btn-back 	
+{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QEMDjAd0KSDrwAAAElJREFUSMdjYBgFwx4wYhP8////f6INYGRkJNlWYi0gRh0TrYOIhVIDkH2BLbho7oNRC0YtoGE+IKW4ILksoma5NPTjYBQMPAAA/RIYEzJTa9gAAAAASUVORK5CYII=);
+}
+.ia-drag-panel-btn-front 	
+{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QEMDjEnD7NrXAAAAEZJREFUSMdjYBgFwx4wYhP8////f6INYGRkxCfPRGsfMA36ICIUXBT7gBEKhm8cjFowAiwgCIjNdLjU0dwHLNT0xSgYnAAAbKAUGZBEUzkAAAAASUVORK5CYII=);
 }
 /*------------------- Feature Card -------------------*/
 .ia-feature-card-scrollbox
@@ -1184,3 +1311,72 @@ canvas
 	line-height: 0;
 	height: 0;
 }*/
+/*------------------- Responsive Menu -------------------*/
+.ia-flow-report
+{
+	padding-top:15px;
+	padding-left:30px;
+	padding-right:30px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	/**  Added to the report when in flow layout  */ 
+}
+.ia-flow-panel-container
+{
+	box-sizing: border-box;
+	padding-bottom: 15px;
+	width: 100%;
+	/**  Holds the panels when in flow layout  */ 
+}
+.ia-flow-panel
+{
+	min-height: 40px;
+	max-height: 400px;
+	/**  Added to panels when in flow layout  */ 
+}
+.ia-flow-image-container
+{
+	box-sizing: border-box;
+	padding-bottom: 15px;
+	text-align:left;
+	/**  Holds the images when in flow layout  */ 
+}
+.ia-flow-menu
+{
+	position:fixed;
+	z-index:999999;
+	top:0;
+	right:0;
+	overflow:hidden;
+	/**  Menu to contain button and menubar items in flow layout  */ 
+}
+.ia-flow-menu div + div
+{
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #cccccc; 
+	/**  Adds border to bottom of menu items  */ 
+}
+.ia-flow-menu-items
+{
+	display:none;
+	/**  Hides menu items at startup  */ 
+}
+.ia-flow-menu-item
+{
+	min-width: 150px;
+	vertical-align:middle; 
+	text-align:center;
+	padding: 15px; 
+	/**  Responsive menu items  */ 
+}
+.ia-flow-menu-icon
+{
+	text-align:left;
+	vertical-align:middle; 
+	padding:20px; 
+	background-image:url(menu_icon.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	/**  Responsive menu icon  */ 
+}
