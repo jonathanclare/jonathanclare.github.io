@@ -5,10 +5,10 @@
 	"layers":[
 	{
 		"type":"base-layer",
-		"id":"_Wards-nottinghamshireshp1",
+		"id":"Wards-nottinghamshireshp1",
 		"name":"Wards",
 		"geometry":"polygon",
-		"url":"_Wards-nottinghamshireshp1.js",
+		"url":"Wards-nottinghamshireshp1.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",
@@ -24,10 +24,10 @@
 	},
 	{
 		"type":"base-layer",
-		"id":"_Wards_centoids_nottinghamshireshp2",
+		"id":"Wards_centoids_nottinghamshireshp2",
 		"name":"Wards",
 		"geometry":"point",
-		"url":"_Wards_centoids_nottinghamshireshp2.js",
+		"url":"Wards_centoids_nottinghamshireshp2.js",
 		"visible":true,
 		"symbolSize":15,
 		"fillColor":"#ffffff",
