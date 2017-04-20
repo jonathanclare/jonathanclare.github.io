@@ -79,15 +79,21 @@ section
 }
 .screenshot-img
 {
+    cursor:pointer;
+    cursor:zoom-in;
+    position:relative;
     padding:10px;
     background-color:#fff;
     border:solid 1px #ddd;
-    cursor:pointer;
     transition: border-color 0.3s;
+}
+.screenshot-img:hover .slideshow-icon
+{
+    opacity:0.7;
 }
 .screenshot-img:hover
 {
-    border:solid 1px #000;
+    border:solid 1px #ff7144;
 }
 .screenshot-text
 {
@@ -184,6 +190,7 @@ section
 /* Centered background images */
 .bg-img
 {
+    /*background-origin: content-box;*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -202,23 +209,22 @@ section
 }
 .slideshow-icon
 {
+    position:absolute;
+    top:0px;
+    right:0px;
     text-align:center;
     width:3rem;
     line-height:3rem;;
     font-size:1.5rem;
     color:#fff;
-    background:#000;
-    float:right;
+    background:#ff7144;
+    /*float:right;*/
     opacity:0;
     transition: opacity 0.3s;
 }
 .slideshow-icon:before 
 {
     content: '\01F50D';
-}
-.slide:hover .slideshow-icon
-{
-    opacity:0.7;
 }
 .slideshow 
 {

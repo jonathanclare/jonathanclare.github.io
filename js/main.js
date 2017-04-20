@@ -51,7 +51,7 @@ function buildSlideShow()
        
         // Add click to open slideshow.
         (function (_src) {
-            on(elt, 'click', function(e)
+            on(elt.parentElement, 'click', function(e)
             {
                 openSlideShow(_src);
             });
@@ -59,7 +59,7 @@ function buildSlideShow()
 
         var slideShowIcon = document.createElement('div');
         addClass(slideShowIcon, 'slideshow-icon')
-        elt.appendChild(slideShowIcon);
+        elt.parentElement.appendChild(slideShowIcon);
 
         var title = elt.getAttribute('title');
 
