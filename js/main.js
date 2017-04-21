@@ -26,10 +26,15 @@ function onScroll()
 function lazyLoadImages () 
 {
     var buffer = viewportHeight();
+    var topOfScreen = pageTopOffset() - buffer;
+    var bottomOfScreen = pageBottomOffset() + buffer;
+
     [].forEach.call(document.querySelectorAll('[data-src]'), function(elt) 
     {
-        //if((offset(elt) - buffer) <= pageBottomOffset() && )
-        if(pageBottomOffset() >= offset(elt) && pageTopOffset() <= offset(elt) + bounds(elt).height)
+        var topOfElement = offset(elt);
+        var bottomOfElement = offset(elt) + bounds(elt).height;
+
+        if((bottomOfScreen > topOfElement) && (topOfScreen < bottomOfElement))
         {
             var src = elt.getAttribute('data-src');
             elt.removeAttribute('data-src');
