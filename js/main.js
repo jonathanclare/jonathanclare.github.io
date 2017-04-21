@@ -12,8 +12,49 @@ else
 // Called when page has loaded.
 window.onload = function () 
 { 
-    buildSlideShow();
-}; 
+   // buildSlideShow();
+    onScroll();
+    on(window, 'scroll resize', debounce(onScroll));
+} 
+
+function onScroll()
+{
+    lazyLoadImages();
+}
+
+// Lazy Load slides images.
+function lazyLoadImages () 
+{
+    var buffer = viewportHeight();
+    [].forEach.call(document.querySelectorAll('[data-src]'), function(elt) 
+    {
+        //if((offset(elt) - buffer) <= pageBottomOffset() && )
+        if(pageBottomOffset() >= offset(elt) && pageTopOffset() <= offset(elt) + bounds(elt).height)
+        {
+            var src = elt.getAttribute('data-src');
+            elt.removeAttribute('data-src');
+            if (elt.nodeName == 'IMG')
+            {
+                elt.removeAttribute('data-src');
+                elt.setAttribute('src', src);
+                elt.onload = function() 
+                {
+                    addClass(elt, 'bg-img-complete');
+                }
+            }
+            else
+            {
+                var img = document.createElement('img'); 
+                img.setAttribute('src', src);
+                img.onload = function() 
+                {
+                    elt.style.backgroundImage = 'url(' + src + ')';
+                    addClass(elt, 'bg-img-complete');
+                }
+            }
+        }
+    });
+}
 
 // Slideshow.
 var xDown = null;                                                        
@@ -48,10 +89,10 @@ function buildSlideShow()
             src = elt.getAttribute('src');
         else     
             src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
-       
+
         // Add click to open slideshow.
         (function (_src) {
-            on(elt.parentElement, 'click', function(e)
+            on(elt, 'click', function(e)
             {
                 openSlideShow(_src);
             });
@@ -59,7 +100,7 @@ function buildSlideShow()
 
         var slideShowIcon = document.createElement('div');
         addClass(slideShowIcon, 'slideshow-icon')
-        elt.parentElement.appendChild(slideShowIcon);
+        elt.appendChild(slideShowIcon);
 
         var title = elt.getAttribute('title');
 
@@ -176,6 +217,10 @@ function bounds(element)
 {
     return element.getBoundingClientRect();
 }
+function offset(element) 
+{
+    return pageOffset().y + bounds(element).top;
+}
 function viewportHeight() 
 {
     return document.documentElement.clientHeight;
@@ -187,6 +232,14 @@ function pageOffset()
         x : (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
         y : (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0)
     };
+}
+function pageTopOffset() 
+{
+    return pageOffset().y;
+}
+function pageBottomOffset() 
+{
+    return pageTopOffset() + viewportHeight();
 }
 function debounce(func, wait, immediate) 
 {

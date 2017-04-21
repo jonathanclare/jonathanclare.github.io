@@ -190,10 +190,15 @@ section
 /* Centered background images */
 .bg-img
 {
-    /*background-origin: content-box;*/
+    opacity: 0;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    transition: opacity 2s;
+}
+.bg-img-complete
+{
+    opacity: 1;
 }
 
 /* images */
@@ -218,7 +223,6 @@ section
     font-size:1.5rem;
     color:#fff;
     background:#ff7144;
-    /*float:right;*/
     opacity:0;
     transition: opacity 0.3s;
 }
