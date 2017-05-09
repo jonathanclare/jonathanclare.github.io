@@ -12,9 +12,9 @@ else
 // Called when page has loaded.
 window.onload = function () 
 { 
-    var slideshow = new jcSlideShow.Slideshow();
+    var slideshow = new jcSlideShow();
     onScroll();
-    on(window, 'scroll resize', debounce(onScroll));
+    jcDOM.on(window, 'scroll resize', jcDOM.debounce(onScroll));
 } 
 
 function onScroll()
@@ -25,14 +25,14 @@ function onScroll()
 // Lazy Load slides images.
 function lazyLoadImages () 
 {
-    var buffer = viewportHeight();
-    var topOfScreen = pageTopOffset() - buffer;
-    var bottomOfScreen = pageBottomOffset() + buffer;
+    var buffer = jcDOM.viewportHeight();
+    var topOfScreen = jcDOM.pageTopOffset() - buffer;
+    var bottomOfScreen = jcDOM.pageBottomOffset() + buffer;
 
     [].forEach.call(document.querySelectorAll('[data-src]'), function(elt) 
     {
-        var topOfElement = offset(elt);
-        var bottomOfElement = offset(elt) + bounds(elt).height;
+        var topOfElement = jcDOM.offset(elt);
+        var bottomOfElement = jcDOM.offset(elt) + jcDOM.bounds(elt).height;
 
         if((bottomOfScreen > topOfElement) && (topOfScreen < bottomOfElement))
         {
@@ -44,7 +44,7 @@ function lazyLoadImages ()
                 elt.setAttribute('src', src);
                 elt.onload = function() 
                 {
-                    addClass(elt, 'bg-img-complete');
+                    jcDOM.addClass(elt, 'bg-img-complete');
                 }
             }
             else
@@ -54,25 +54,122 @@ function lazyLoadImages ()
                 img.onload = function() 
                 {
                     elt.style.backgroundImage = 'url(' + src + ')';
-                    addClass(elt, 'bg-img-complete');
+                    jcDOM.addClass(elt, 'bg-img-complete');
                 }
             }
         }
     });
 }
 
+// DOM.
+var jcDOM = (function (window, document, undefined)
+{
+    'use strict';
+
+    var o =  
+    {
+        addClass:function (element, className)
+        {
+            element.className += ' ' + className;
+        },
+
+        removeClass:function (element, className)
+        {
+            element.className = element.className.replace(new RegExp('(?:^|\\s)'+ className + '(?:\\s|$)'), ' ');
+        },
+
+        hasClass:function (element, className)
+        {
+            return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+        },
+
+        on:function (element, types, listener, useCapture)
+        {
+            useCapture = useCapture === undefined ? true : false;
+            var arrTypes = types.split(' ');
+            for (var i = 0; i < arrTypes.length; i++)  
+            {
+                var type = arrTypes[i].trim();
+                element.addEventListener(type, listener, useCapture);
+            }
+        },
+
+        off:function (element, types, listener, useCapture)
+        {
+            useCapture = useCapture === undefined ? true : false;
+            var arrTypes = types.split(' ');
+            for (var i = 0; i < arrTypes.length; i++)  
+            {
+                var type = arrTypes[i].trim();
+                element.removeEventListener(type, listener, useCapture);
+            }
+        },
+
+        bounds:function (element) 
+        {
+            return element.getBoundingClientRect();
+        },
+
+        offset:function (element) 
+        {
+            return this.pageOffset().y + this.bounds(element).top;
+        },
+
+        viewportHeight:function () 
+        {
+            return document.documentElement.clientHeight;
+        },
+
+        pageOffset:function () 
+        {
+            var doc = document.documentElement;
+            return {
+                x : (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
+                y : (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0)
+            };
+        },
+
+        pageTopOffset:function () 
+        {
+            return this.pageOffset().y;
+        },
+
+        pageBottomOffset:function () 
+        {
+            return this.pageTopOffset() + this.viewportHeight();
+        },
+
+        debounce:function (func, wait, immediate) 
+        {
+            var timeout;
+            return function() 
+            {
+                var me = this, args = arguments;
+                var later = function() 
+                {
+                    timeout = null;
+                    if (!immediate) func.apply(me, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait || 250);
+                if (callNow) func.apply(me, args);
+            };
+        }
+    }
+    return o;
+}) (window, document);
+
 // Slideshow.
 var jcSlideShow = (function ($, window, document, undefined)
 {
     'use strict';
 
-    var o = {};
-
     var keyDown, touchStart, touchMove, xDown = null;
 
-    o.Slideshow = function (options)
+    var Slideshow = function (options)
     {
-        this._container = getHtml(this);
+        this._container = init(this);
 
         keyDown  = onKeyDown.bind(this);
         touchStart = onTouchStart.bind(this);
@@ -81,7 +178,7 @@ var jcSlideShow = (function ($, window, document, undefined)
         return this;
     };
 
-    function getHtml(oSlideshow)
+    function init(oSlideshow)
     {
         var strHtml = '<div class="slideshow-slides">';
 
@@ -91,14 +188,14 @@ var jcSlideShow = (function ($, window, document, undefined)
             var title = elt.getAttribute('data-title');
 
             (function (_oSlideshow, _src) {
-                on(elt, 'click', function(e)
+                $.on(elt, 'click', function(e)
                 {
                     _oSlideshow.open(_src);
                 });
             })(oSlideshow, src);
 
             var slideShowIcon = document.createElement('div');
-            addClass(slideShowIcon, 'slideshow-icon')
+            $.addClass(slideShowIcon, 'slideshow-icon')
             elt.appendChild(slideShowIcon);
 
             if (index === 0) 
@@ -118,100 +215,98 @@ var jcSlideShow = (function ($, window, document, undefined)
         strHtml += '<div class="slideshow-next flex-box" role="button" tabindex="0">&#10095;</div>';
         strHtml += '<div class="slideshow-close flex-box" role="button" tabindex="0">&times;</div>';
 
-        var elt = document.createElement('div');
-        addClass(elt, 'slideshow')
-        elt.innerHTML = strHtml;
-        on(elt, 'click', function (e)
+        var parent = document.createElement('div');
+        $.addClass(parent, 'slideshow')
+        parent.innerHTML = strHtml;
+        $.on(parent, 'click', function (e)
         {
-            console.log(e)
-            if (hasClass(e.target, 'slideshow-prev')) oSlideshow.prev();
-            else if (hasClass(e.target, 'slideshow-close')) oSlideshow.close();
+            if ($.hasClass(e.target, 'slideshow-prev')) oSlideshow.prev();
+            else if ($.hasClass(e.target, 'slideshow-close')) oSlideshow.close();
             else oSlideshow.next();
         }, false);
-        document.querySelector('body').appendChild(elt);
+        document.querySelector('body').appendChild(parent);
 
-        return elt;
+        return parent;
     }
 
-    o.Slideshow.prototype.open = function (src)
+    Slideshow.prototype.open = function (src)
     {
         if (this._container !== null)
         {
-            on(document, 'keydown', keyDown);
-            on(document, 'touchstart', touchStart);
-            on(document, 'touchmove', touchMove);
+            $.on(document, 'keydown', keyDown);
+            $.on(document, 'touchstart', touchStart);
+            $.on(document, 'touchmove', touchMove);
 
-            addClass(document.body, 'slideshow-hide-scrollbars');
+            $.addClass(document.body, 'slideshow-hide-scrollbars');
             this.show(src);
-            addClass(this._container, 'slideshow-active');
+            $.addClass(this._container, 'slideshow-active');
         }
         return this;
     };
 
-    o.Slideshow.prototype.close = function ()
+    Slideshow.prototype.close = function ()
     {
         if (this._container !== null)
         {
-            off(document, 'keydown', keyDown);
-            off(document, 'touchstart', touchStart);
-            off(document, 'touchmove', touchMove);
-
-            removeClass(document.body, 'slideshow-hide-scrollbars');
-            removeClass(this._container, 'slideshow-active');
+            $.off(document, 'keydown', keyDown);
+            $.off(document, 'touchstart', touchStart);
+            $.off(document, 'touchmove', touchMove);
+            $.removeClass(document.body, 'slideshow-hide-scrollbars');
+            $.removeClass(this._container, 'slideshow-active');
         }
         return this;
     };
 
-    o.Slideshow.prototype.show = function (src)
+    Slideshow.prototype.show = function (src)
     { 
         if (this._container !== null && src !== undefined)
         {
             var as = this.activeSlide()
-            addClass(this.slide(src), 'slideshow-slide-active');
-            removeClass(as, 'slideshow-slide-active');
+            $.addClass(this.slide(src), 'slideshow-slide-active');
+            $.removeClass(as, 'slideshow-slide-active');
         }
         return this;
     };
 
-    o.Slideshow.prototype.next = function ()
+    Slideshow.prototype.next = function ()
     {
         if (this._container !== null)
         {
             var as = this.activeSlide()
-            addClass(this.nextSlide(), 'slideshow-slide-active');
-            removeClass(as, 'slideshow-slide-active');
+            $.addClass(this.nextSlide(), 'slideshow-slide-active');
+            $.removeClass(as, 'slideshow-slide-active');
         }
         return this;
     };
     
-    o.Slideshow.prototype.prev = function ()
+    Slideshow.prototype.prev = function ()
     {
         if (this._container !== null)
         {
             var as = this.activeSlide()
-            addClass(this.prevSlide(), 'slideshow-slide-active');
-            removeClass(as, 'slideshow-slide-active');
+            $.addClass(this.prevSlide(), 'slideshow-slide-active');
+            $.removeClass(as, 'slideshow-slide-active');
         }
         return this;
     };
 
-    o.Slideshow.prototype.slide = function (src) 
+    Slideshow.prototype.slide = function (src) 
     {             
         return this._container.querySelector('img[src="'+src+'"]').parentElement.parentElement;
     }
 
-    o.Slideshow.prototype.activeSlide = function () 
+    Slideshow.prototype.activeSlide = function () 
     {             
         return this._container.querySelector('.slideshow-slide-active');;
     }
 
-    o.Slideshow.prototype.nextSlide = function () 
+    Slideshow.prototype.nextSlide = function () 
     {           
         var s = this.activeSlide();  
         return (s.nextElementSibling !== null ? s.nextElementSibling : s.parentNode.firstElementChild);
     }     
 
-    o.Slideshow.prototype.prevSlide = function () 
+    Slideshow.prototype.prevSlide = function () 
     {            
         var s = this.activeSlide();
         return (s.previousElementSibling !== null ? s.previousElementSibling : s.parentNode.lastElementChild);
@@ -240,85 +335,6 @@ var jcSlideShow = (function ($, window, document, undefined)
         else if (evt.keyCode === 27)  this.close();
     }
 
-    return o;
+    return Slideshow;
 
-}) ({}, window, document);
-
-// Util functions.
-function addClass (element, className)
-{
-    element.className += ' ' + className;
-}
-function removeClass (element, className)
-{
-    element.className = element.className.replace(new RegExp('(?:^|\\s)'+ className + '(?:\\s|$)'), ' ');
-}
-function hasClass (element, className)
-{
-    return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
-}
-function on(element, types, listener, useCapture)
-{
-    useCapture = useCapture === undefined ? true : false;
-    var arrTypes = types.split(' ');
-    for (var i = 0; i < arrTypes.length; i++)  
-    {
-        var type = arrTypes[i].trim();
-        element.addEventListener(type, listener, useCapture);
-    }
-}
-function off(element, types, listener, useCapture)
-{
-    useCapture = useCapture === undefined ? true : false;
-    var arrTypes = types.split(' ');
-    for (var i = 0; i < arrTypes.length; i++)  
-    {
-        var type = arrTypes[i].trim();
-        element.removeEventListener(type, listener, useCapture);
-    }
-}
-function bounds(element) 
-{
-    return element.getBoundingClientRect();
-}
-function offset(element) 
-{
-    return pageOffset().y + bounds(element).top;
-}
-function viewportHeight() 
-{
-    return document.documentElement.clientHeight;
-}
-function pageOffset() 
-{
-    var doc = document.documentElement;
-    return {
-        x : (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
-        y : (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0)
-    };
-}
-function pageTopOffset() 
-{
-    return pageOffset().y;
-}
-function pageBottomOffset() 
-{
-    return pageTopOffset() + viewportHeight();
-}
-function debounce(func, wait, immediate) 
-{
-    var timeout;
-    return function() 
-    {
-        var me = this, args = arguments;
-        var later = function() 
-        {
-            timeout = null;
-            if (!immediate) func.apply(me, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait || 250);
-        if (callNow) func.apply(me, args);
-    };
-}
+}) (jcDOM, window, document);
