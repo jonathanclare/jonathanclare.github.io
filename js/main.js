@@ -19,48 +19,8 @@ window.onload = function ()
 
 function onScroll()
 {
-    lazyLoadImages();
+    jcDOM.lazyLoadImages();
 }
-
-// Lazy Load slides images.
-function lazyLoadImages () 
-{
-    var buffer = jcDOM.viewportHeight();
-    var topOfScreen = jcDOM.pageTopOffset() - buffer;
-    var bottomOfScreen = jcDOM.pageBottomOffset() + buffer;
-
-    [].forEach.call(document.querySelectorAll('[data-src]'), function(elt) 
-    {
-        var topOfElement = jcDOM.offset(elt);
-        var bottomOfElement = jcDOM.offset(elt) + jcDOM.bounds(elt).height;
-
-        if((bottomOfScreen > topOfElement) && (topOfScreen < bottomOfElement))
-        {
-            var src = elt.getAttribute('data-src');
-            elt.removeAttribute('data-src');
-            if (elt.nodeName == 'IMG')
-            {
-                elt.removeAttribute('data-src');
-                elt.setAttribute('src', src);
-                elt.onload = function() 
-                {
-                    jcDOM.addClass(elt, 'bg-img-complete');
-                }
-            }
-            else
-            {
-                var img = document.createElement('img'); 
-                img.setAttribute('src', src);
-                img.onload = function() 
-                {
-                    elt.style.backgroundImage = 'url(' + src + ')';
-                    jcDOM.addClass(elt, 'bg-img-complete');
-                }
-            }
-        }
-    });
-}
-
 // DOM.
 var jcDOM = (function (window, document, undefined)
 {
@@ -68,22 +28,59 @@ var jcDOM = (function (window, document, undefined)
 
     var o =  
     {
-        addClass:function (element, className)
+        lazyLoadImages : function () 
+        {
+            var buffer = this.viewportHeight();
+            var topOfScreen = this.pageTopOffset() - buffer;
+            var bottomOfScreen = this.pageBottomOffset() + buffer;
+
+            [].forEach.call(document.querySelectorAll('[data-src]'), function(elt) 
+            {
+                var topOfElement = this.offset(elt);
+                var bottomOfElement = this.offset(elt) + this.bounds(elt).height;
+
+                if((bottomOfScreen > topOfElement) && (topOfScreen < bottomOfElement))
+                {
+                    var src = elt.getAttribute('data-src');
+                    elt.removeAttribute('data-src');
+                    if (elt.nodeName == 'IMG')
+                    {
+                        elt.setAttribute('src', src);
+                        elt.onload = function() 
+                        {
+                            this.addClass(elt, 'bg-img-complete');
+                        }.bind(this);
+                    }
+                    else
+                    {
+                        var img = document.createElement('img'); 
+                        img.setAttribute('src', src);
+                        img.onload = function() 
+                        {
+                            elt.style.backgroundImage = 'url(' + src + ')';
+                            this.addClass(elt, 'bg-img-complete');
+                        }.bind(this);
+                    }
+                }
+            }.bind(this));
+        }, 
+
+        addClass : function (element, className)
         {
             element.className += ' ' + className;
         },
 
-        removeClass:function (element, className)
+        removeClass : function (element, className)
         {
             element.className = element.className.replace(new RegExp('(?:^|\\s)'+ className + '(?:\\s|$)'), ' ');
         },
 
-        hasClass:function (element, className)
+        hasClass : function (element, className)
         {
             return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
         },
 
-        on:function (element, types, listener, useCapture)
+        on : function (element, types, listener, useCapture)
         {
             useCapture = useCapture === undefined ? true : false;
             var arrTypes = types.split(' ');
@@ -94,7 +91,7 @@ var jcDOM = (function (window, document, undefined)
             }
         },
 
-        off:function (element, types, listener, useCapture)
+        off : function (element, types, listener, useCapture)
         {
             useCapture = useCapture === undefined ? true : false;
             var arrTypes = types.split(' ');
@@ -105,22 +102,22 @@ var jcDOM = (function (window, document, undefined)
             }
         },
 
-        bounds:function (element) 
+        bounds : function (element) 
         {
             return element.getBoundingClientRect();
         },
 
-        offset:function (element) 
+        offset : function (element) 
         {
             return this.pageOffset().y + this.bounds(element).top;
         },
 
-        viewportHeight:function () 
+        viewportHeight : function () 
         {
             return document.documentElement.clientHeight;
         },
 
-        pageOffset:function () 
+        pageOffset : function () 
         {
             var doc = document.documentElement;
             return {
@@ -129,17 +126,17 @@ var jcDOM = (function (window, document, undefined)
             };
         },
 
-        pageTopOffset:function () 
+        pageTopOffset : function () 
         {
             return this.pageOffset().y;
         },
 
-        pageBottomOffset:function () 
+        pageBottomOffset : function () 
         {
             return this.pageTopOffset() + this.viewportHeight();
         },
 
-        debounce:function (func, wait, immediate) 
+        debounce : function (func, wait, immediate) 
         {
             var timeout;
             return function() 
@@ -238,7 +235,7 @@ var jcSlideShow = (function ($, window, document, undefined)
             $.on(document, 'touchmove', touchMove);
 
             $.addClass(document.body, 'slideshow-hide-scrollbars');
-            this.show(src);
+            if (src !== undefined) this.show(src);
             $.addClass(this._container, 'slideshow-active');
         }
         return this;
