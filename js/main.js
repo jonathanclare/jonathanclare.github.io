@@ -12,7 +12,7 @@ else
 // Called when page has loaded.
 window.onload = function () 
 { 
-   // buildSlideShow();
+    var slideshow = new jcSlideShow.Slideshow();
     onScroll();
     on(window, 'scroll resize', debounce(onScroll));
 } 
@@ -62,129 +62,187 @@ function lazyLoadImages ()
 }
 
 // Slideshow.
-var xDown = null;                                                        
-function slideShowOnTouchStart (evt) 
-{             
-    xDown = evt.touches[0].clientX;                                      
-}                                            
-function slideShowOnTouchMove (evt) 
+var jcSlideShow = (function ($, window, document, undefined)
 {
-    if (!xDown) return;
-    var xUp = evt.touches[0].clientX;     
-    var xDiff = xDown - xUp;
-    if ( xDiff > 0 ) nextSlide();
-    else  prevSlide();
-    xDown = null;
-}
-function slideShowOnKeyDown (evt)
-{
-    evt = evt || window.event;
-    if (evt.keyCode == '37')  prevSlide()
-    else if (evt.keyCode == '39')  nextSlide();
-    else if (evt.keyCode == '27')  closeSlideShow();
-}
-function buildSlideShow()
-{
-    var strHtml = '<div class="slideshow-slides">';
+    'use strict';
 
-    [].forEach.call(document.querySelectorAll('.slide'), function(elt, index) 
+    var o = {};
+
+    var keyDown, touchStart, touchMove, xDown = null;
+
+    o.Slideshow = function (options)
     {
-        var src;
-        if (elt.nodeName == 'IMG') 
-            src = elt.getAttribute('src');
-        else     
-            src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+        this._container = getHtml(this);
 
-        // Add click to open slideshow.
-        (function (_src) {
-            on(elt, 'click', function(e)
-            {
-                openSlideShow(_src);
-            });
-        })(src);
+        keyDown  = onKeyDown.bind(this);
+        touchStart = onTouchStart.bind(this);
+        touchMove = onTouchMove.bind(this);
 
-        var slideShowIcon = document.createElement('div');
-        addClass(slideShowIcon, 'slideshow-icon')
-        elt.appendChild(slideShowIcon);
+        return this;
+    };
 
-        var title = elt.getAttribute('title');
-
-        if (index === 0) 
-            strHtml += '<div class="slideshow-slide slideshow-slide-active">';
-        else 
-            strHtml += '<div class="slideshow-slide">';
-
-                strHtml += '<div class="slideshow-img flex-box">';
-                    strHtml += '<img src="'+src+'" alt="'+title+'" />';
-                strHtml += '</div>';
-                strHtml += '<div class="slideshow-text">'+title+'</div>';
-            strHtml += '</div>';
-    });
-
-    strHtml += '</div>'
-    strHtml += '<div class="slideshow-prev flex-box" role="button" tabindex="0">&#10094;</div>';
-    strHtml += '<div class="slideshow-next flex-box" role="button" tabindex="0">&#10095;</div>';
-    strHtml += '<div class="slideshow-close flex-box" role="button" tabindex="0">&times;</div>';
-
-    var slideshow = document.createElement('div');
-    addClass(slideshow, 'slideshow no-select')
-    slideshow.innerHTML = strHtml; 
-    on(slideshow, 'click', function (e)
+    function getHtml(oSlideshow)
     {
-        if (hasClass(e.target, 'slideshow-prev')) prevSlide();
-        else if (hasClass(e.target, 'slideshow-next') || hasClass(e.target, 'slideshow-img')) nextSlide();
-        else if (hasClass(e.target, 'slideshow-close')) closeSlideShow();
-    }, false);
+        var strHtml = '<div class="slideshow-slides">';
 
-    document.querySelector('body').appendChild(slideshow);
-}
-function openSlideShow(src)
-{
-    var slideshow = document.querySelector('.slideshow');
-    if (slideshow !== null)
-    {
-        on(document, 'keydown', slideShowOnKeyDown);
-        on(document, 'touchstart', slideShowOnTouchStart);
-        on(document, 'touchmove', slideShowOnTouchMove);
-
-        addClass(document.body, 'slideshow-hide-scrollbars');
-        slideshow.querySelector('.slideshow-next').focus();
-        if (src !== undefined)
+        [].forEach.call(document.querySelectorAll('.slide'), function(elt, index) 
         {
-            var activeSlide = slideshow.querySelector('.slideshow-slide-active');
-            var nextSlide = slideshow.querySelector('img[src="'+src+'"], img[data-src="'+src+'"]').parentElement.parentElement;
-            addClass(nextSlide, 'slideshow-slide-active');
-            removeClass(activeSlide, 'slideshow-slide-active');
-        }
-        addClass(slideshow, 'slideshow-active');
-    }
-}
-function closeSlideShow()
-{
-    off(document, 'keydown', slideShowOnKeyDown);
-    off(document, 'touchstart', slideShowOnTouchStart);
-    off(document, 'touchmove', slideShowOnTouchMove);
+            var src = elt.getAttribute('data-src');
+            var title = elt.getAttribute('data-title');
 
-    removeClass(document.body, 'slideshow-hide-scrollbars');
-    var slideshow = document.querySelector('.slideshow');
-    removeClass(slideshow, 'slideshow-active');
-}
-function nextSlide()
-{
-    var slideshow = document.querySelector('.slideshow');
-    var activeSlide = slideshow.querySelector('.slideshow-slide-active');
-    var nextSlide = (activeSlide.nextElementSibling !== null ? activeSlide.nextElementSibling : activeSlide.parentNode.firstElementChild);
-    addClass(nextSlide, 'slideshow-slide-active');
-    removeClass(activeSlide, 'slideshow-slide-active');
-}
-function prevSlide()
-{
-    var slideshow = document.querySelector('.slideshow');
-    var activeSlide = slideshow.querySelector('.slideshow-slide-active');
-    var prevSlide = (activeSlide.previousElementSibling !== null ? activeSlide.previousElementSibling : activeSlide.parentNode.lastElementChild);
-    addClass(prevSlide, 'slideshow-slide-active');
-    removeClass(activeSlide, 'slideshow-slide-active');
-}
+            (function (_oSlideshow, _src) {
+                on(elt, 'click', function(e)
+                {
+                    _oSlideshow.open(_src);
+                });
+            })(oSlideshow, src);
+
+            var slideShowIcon = document.createElement('div');
+            addClass(slideShowIcon, 'slideshow-icon')
+            elt.appendChild(slideShowIcon);
+
+            if (index === 0) 
+                strHtml += '<div class="slideshow-slide slideshow-slide-active">';
+            else 
+                strHtml += '<div class="slideshow-slide">';
+
+                    strHtml += '<div class="slideshow-img flex-box">';
+                        strHtml += '<img src="'+src+'" alt="'+title+'" />';
+                    strHtml += '</div>';
+                    strHtml += '<div class="slideshow-text">'+title+'</div>';
+                strHtml += '</div>';
+        });
+
+        strHtml += '</div>'
+        strHtml += '<div class="slideshow-prev flex-box" role="button" tabindex="0">&#10094;</div>';
+        strHtml += '<div class="slideshow-next flex-box" role="button" tabindex="0">&#10095;</div>';
+        strHtml += '<div class="slideshow-close flex-box" role="button" tabindex="0">&times;</div>';
+
+        var elt = document.createElement('div');
+        addClass(elt, 'slideshow')
+        elt.innerHTML = strHtml;
+        on(elt, 'click', function (e)
+        {
+            console.log(e)
+            if (hasClass(e.target, 'slideshow-prev')) oSlideshow.prev();
+            else if (hasClass(e.target, 'slideshow-close')) oSlideshow.close();
+            else oSlideshow.next();
+        }, false);
+        document.querySelector('body').appendChild(elt);
+
+        return elt;
+    }
+
+    o.Slideshow.prototype.open = function (src)
+    {
+        if (this._container !== null)
+        {
+            on(document, 'keydown', keyDown);
+            on(document, 'touchstart', touchStart);
+            on(document, 'touchmove', touchMove);
+
+            addClass(document.body, 'slideshow-hide-scrollbars');
+            this.show(src);
+            addClass(this._container, 'slideshow-active');
+        }
+        return this;
+    };
+
+    o.Slideshow.prototype.close = function ()
+    {
+        if (this._container !== null)
+        {
+            off(document, 'keydown', keyDown);
+            off(document, 'touchstart', touchStart);
+            off(document, 'touchmove', touchMove);
+
+            removeClass(document.body, 'slideshow-hide-scrollbars');
+            removeClass(this._container, 'slideshow-active');
+        }
+        return this;
+    };
+
+    o.Slideshow.prototype.show = function (src)
+    { 
+        if (this._container !== null && src !== undefined)
+        {
+            var as = this.activeSlide()
+            addClass(this.slide(src), 'slideshow-slide-active');
+            removeClass(as, 'slideshow-slide-active');
+        }
+        return this;
+    };
+
+    o.Slideshow.prototype.next = function ()
+    {
+        if (this._container !== null)
+        {
+            var as = this.activeSlide()
+            addClass(this.nextSlide(), 'slideshow-slide-active');
+            removeClass(as, 'slideshow-slide-active');
+        }
+        return this;
+    };
+    
+    o.Slideshow.prototype.prev = function ()
+    {
+        if (this._container !== null)
+        {
+            var as = this.activeSlide()
+            addClass(this.prevSlide(), 'slideshow-slide-active');
+            removeClass(as, 'slideshow-slide-active');
+        }
+        return this;
+    };
+
+    o.Slideshow.prototype.slide = function (src) 
+    {             
+        return this._container.querySelector('img[src="'+src+'"]').parentElement.parentElement;
+    }
+
+    o.Slideshow.prototype.activeSlide = function () 
+    {             
+        return this._container.querySelector('.slideshow-slide-active');;
+    }
+
+    o.Slideshow.prototype.nextSlide = function () 
+    {           
+        var s = this.activeSlide();  
+        return (s.nextElementSibling !== null ? s.nextElementSibling : s.parentNode.firstElementChild);
+    }     
+
+    o.Slideshow.prototype.prevSlide = function () 
+    {            
+        var s = this.activeSlide();
+        return (s.previousElementSibling !== null ? s.previousElementSibling : s.parentNode.lastElementChild);
+    }     
+     
+    function onTouchStart (evt) 
+    {             
+        xDown = evt.touches[0].clientX;                                      
+    }     
+
+    function onTouchMove (evt) 
+    {
+        if (!xDown) return;
+        var xUp = evt.touches[0].clientX;     
+        var xDiff = xDown - xUp;
+        if ( xDiff > 0 ) this.next();
+        else  this.prev();
+        xDown = null;
+    }
+
+    function onKeyDown (evt)
+    {
+        evt = evt || window.event;
+        if (evt.keyCode === 37)  this.prev()
+        else if (evt.keyCode === 39) this.next();
+        else if (evt.keyCode === 27)  this.close();
+    }
+
+    return o;
+
+}) ({}, window, document);
 
 // Util functions.
 function addClass (element, className)
@@ -206,16 +264,17 @@ function on(element, types, listener, useCapture)
     for (var i = 0; i < arrTypes.length; i++)  
     {
         var type = arrTypes[i].trim();
-        element.addEventListener(type, listener);
+        element.addEventListener(type, listener, useCapture);
     }
 }
-function off(element, types, listener)
+function off(element, types, listener, useCapture)
 {
+    useCapture = useCapture === undefined ? true : false;
     var arrTypes = types.split(' ');
     for (var i = 0; i < arrTypes.length; i++)  
     {
         var type = arrTypes[i].trim();
-        element.removeEventListener(type, listener);
+        element.removeEventListener(type, listener, useCapture);
     }
 }
 function bounds(element) 
