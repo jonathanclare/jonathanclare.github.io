@@ -1,26 +1,3 @@
-// Check for modern css support.
-// cssvhunit not working properly on android so removed.
-//if (Modernizr.flexbox && Modernizr.flexwrap && Modernizr.csscalc && Modernizr.cssvhunit && Modernizr.cssvwunit) 
-if (Modernizr.flexbox && Modernizr.flexwrap && Modernizr.csscalc) 
-{
-}
-else 
-{
-   window.location = './basic/index.html';
-}
-
-// Called when page has loaded.
-window.onload = function () 
-{ 
-    var slideshow = new jcSlideShow();
-    onScroll();
-    jcDOM.on(window, 'scroll resize', jcDOM.debounce(onScroll));
-} 
-
-function onScroll()
-{
-    jcDOM.lazyLoadImages();
-}
 // DOM.
 var jcDOM = (function (window, document, undefined)
 {
@@ -334,4 +311,34 @@ var jcSlideShow = (function ($, window, document, undefined)
 
     return Slideshow;
 
+}) (jcDOM, window, document);
+
+// Startup.
+(function ($, window, document, undefined)
+{
+    'use strict';
+
+    // Check for modern css support.
+    // cssvhunit not working properly on android so removed.
+    //if (Modernizr.flexbox && Modernizr.flexwrap && Modernizr.csscalc && Modernizr.cssvhunit && Modernizr.cssvwunit) 
+    if (Modernizr.flexbox && Modernizr.flexwrap && Modernizr.csscalc) 
+    {
+    }
+    else 
+    {
+       window.location = './basic/index.html';
+    }
+
+    // Called when page has loaded.
+    window.onload = function () 
+    { 
+        var slideshow = new jcSlideShow();
+        onScroll();
+        $.on(window, 'scroll resize', $.debounce(onScroll));
+    } 
+
+    function onScroll()
+    {
+        $.lazyLoadImages();
+    }
 }) (jcDOM, window, document);
