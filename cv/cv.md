@@ -1,14 +1,15 @@
-Johnny Coder
-============
+Joonathan Clare
+======
 
--------------------     ----------------------------
-1 MyAddress                        email@example.com
-MyTown 1000                          @twitter_handle
-MyCountry                           1800 my-phone-nr
--------------------     ----------------------------
+16/15 Tay Street                        
+Edinburgh 
+EH111EB
+
+07762266814
+jonathan.david.clare@gmail.com
 
 Education
----------
+------
 
 2010-2014 (expected)
 :   **PhD, Computer Science**; Awesome University (MyTown)
