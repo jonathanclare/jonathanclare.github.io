@@ -11,18 +11,18 @@ Nationality: British
 
 ## Current Expertise
 
-**Coding** Javascript, JSON, HTML, CSS, LESS, Web App Development, Electron, Grunt, Bootstrap, JQuery
-**Data Visualization** SVG, HTML5 Canvas
-**GIS** ArcGIS API for JavaScript, ArcGIS REST API
-**Source Control** GitHub, Microsoft Team Foundation Server
-**Image Editors** GIMP
+**Coding** Javascript, JSON, HTML, CSS, LESS, Web App Development, Electron, Grunt, Bootstrap, JQuery  
+**Data Visualization** SVG, HTML5 Canvas  
+**GIS** ArcGIS API for JavaScript, ArcGIS REST API  
+**Source Control** GitHub, Microsoft Team Foundation Server  
+**Image Editors** GIMP  
 
 ## Previous Experience
 
-**Coding** Java, JSP, ASP, XML, XSL 
-**Data Visualization** ActionScript, Flex, Tcl/Tk
-**GIS**  ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi 
-**Relational database design and development** Access, MySQL
+**Coding** Java, JSP, ASP, XML, XSL  
+**Data Visualization** ActionScript, Flex, Tcl/Tk  
+**GIS**  ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi  
+**Relational database design and development** Access, MySQL  
 
 ## Employment
 
