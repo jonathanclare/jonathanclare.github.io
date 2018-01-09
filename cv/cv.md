@@ -33,9 +33,9 @@ Nationality: British
 
 ## Education
 
-**1997 – 1998** *University of Leicester*, MSc in GIS    
-**1993 – 1997** *University of Glasgow*, BSc in Geography 2:1 with Honours    
+**1997 – 1998** *University of Leicester*, MSc in GIS      
 **1995 – 1996** *Queens University, Canada*, 1yr Exchange Programme  
+**1993 – 1997** *University of Glasgow*, BSc in Geography 2:1 with Honours  
 **1986 – 1993** *Cowley High School*, St. Helens
 
 ## Interests
