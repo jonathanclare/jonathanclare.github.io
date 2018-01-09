@@ -1,9 +1,7 @@
 # Jonathan Clare
 
 16/15 Tay Street
-
 Edinburgh
-
 EH111EB
 
 jonathan.david.clare@gmail.com
