@@ -9,14 +9,27 @@ jonathan.david.clare@gmail.com
 Date of Birth: 03/11/74  
 Nationality: British
 
-## Expertise
+## Current Expertise
+
+**Coding** Javascript, JSON, HTML, CSS, LESS, Web App Development, Electron, Grunt, Bootstrap, JQuery
+**Data Visualization** SVG, HTML5 Canvas
+**GIS** ArcGIS API for JavaScript, ArcGIS REST API
+**Source Control** GitHub, Microsoft Team Foundation Server
+**Image Editors** GIMP
+
+## Previous Experience
+
+**Coding** Java, JSP, ASP, XML, XSL 
+**Data Visualization** ActionScript, Flex, Tcl/Tk
+**GIS**  ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi 
+**Relational database design and development** Access, MySQL
 
 ## Employment
 
 **11/01 - present** *Senior Developer*, GeoWise Ltd  
-**09/00 – 11/01**   *GIS Officer*,      Forest Research  
-**02/99 - 09/00**   *GIS Officer*,      Scottish Wildlife Trust   
-**09/98 - 02/99**   *GIS Developer*,    Mapix Technologies Ltd
+**09/00 – 11/01** *GIS Officer*, Forest Research  
+**02/99 - 09/00** *GIS Officer*, Scottish Wildlife Trust   
+**09/98 - 02/99** *GIS Developer*, Mapix Technologies Ltd
 
 ## Education
 
@@ -27,4 +40,4 @@ Nationality: British
 
 ## Interests
 Snowboarding  
-Kitesurfing  
+Kitesurfing 
