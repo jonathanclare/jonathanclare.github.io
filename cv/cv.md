@@ -14,9 +14,9 @@ Nationality: British
 ## Employment
 
 **11/01 - present** *Senior Developer*, GeoWise Ltd  
-**09/00 – 11/01** *GIS Officer*, Forest Research  
-**02/99 - 09/00** *GIS Officer*, Scottish Wildlife Trust   
-**09/98 - 02/99** *GIS Developer*, Mapix Technologies Ltd
+**09/00 – 11/01**   *GIS Officer*,      Forest Research  
+**02/99 - 09/00**   *GIS Officer*,      Scottish Wildlife Trust   
+**09/98 - 02/99**   *GIS Developer*,    Mapix Technologies Ltd
 
 ## Education
 
@@ -25,5 +25,6 @@ Nationality: British
 **1995 – 1996** *Queens University, Canada* Exchange Programme  
 **1986 – 1993** *Cowley High School*, St. Helens
 
-
 ## Interests
+Snowboarding  
+Kitesurfing  
