@@ -6,22 +6,20 @@ EH111EB
 
 jonathan.david.clare@gmail.com
 
-## Education
+## Employment
 
-2010-2014 (expected)
-:   **PhD, Computer Science**; Awesome University (MyTown)
+11/01 - present 
+Developer, GeoWise Ltd
 
-    *Thesis title: Deep Learning Approaches to the Self-Awesomeness
-     Estimation Problem*
+09/00 – 11/01   
+GIS Officer, Forest Research
 
-2007-2010
-:   **BSc, Computer Science and Electrical Engineering**; University of
-    HomeTown (HomeTown)
+02/99 - 09/00  
+GIS Officer, Scottish Wildlife Trust 
 
-    *Minor: Awesomeology*
+9/98 - 02/99  
+GIS Developer, Mapix Technologies Ltd
 
-Experience
-----------
 
 **Your Most Recent Work Experience:**
 
