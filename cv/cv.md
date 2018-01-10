@@ -5,9 +5,9 @@ Jonathan Clare
 Edinburgh  
 EH111EB
 
-Email: jonathan.david.clare@gmail.com 
-Web: https://jonathanclare.github.io/
-GitHub: https://github.com/jonathanclare 
+Email: jonathan.david.clare@gmail.com  
+Web: https://jonathanclare.github.io/  
+GitHub: https://github.com/jonathanclare  
 Date of Birth: 03/11/74  
 Nationality: British
 
