@@ -5,8 +5,7 @@ Jonathan Clare
 Edinburgh  
 EH111EB
 
-jonathan.david.clare@gmail.com
-
+Email: jonathan.david.clare@gmail.com
 Date of Birth: 03/11/74  
 Nationality: British
 
