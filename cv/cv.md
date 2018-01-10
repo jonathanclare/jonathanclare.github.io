@@ -11,11 +11,20 @@ Nationality: British
 
 ## Current Expertise
 
-**Coding** Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery  
-**Data Visualization** SVG, HTML5 Canvas  
-**GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
-**Source Control** GitHub, Microsoft Team Foundation Server  
-**Image Editors** GIMP  
+**Coding**  
+Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery  
+
+**Data Visualization**  
+SVG, HTML5 Canvas  
+
+**GIS**  
+ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
+
+**Source Control**  
+GitHub, Microsoft Team Foundation Server
+
+**Image Editors**  
+GIMP  
 
 ## Previous Experience
 
