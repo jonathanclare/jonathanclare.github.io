@@ -43,15 +43,15 @@ Access, MySQL
 ## Employment
 
 **11/01 - present** *Senior Developer*, GeoWise Ltd  
-**09/00 – 11/01** *GIS Officer*, Forest Research  
+**09/00 - 11/01** *GIS Officer*, Forest Research  
 **02/99 - 09/00** *GIS Officer*, Scottish Wildlife Trust   
 **09/98 - 02/99** *GIS Developer*, Mapix Technologies Ltd
 
 ## Education
 
-**1997 – 1998** *University of Leicester*, ***MSc in GIS***  
+**1997 – 1998** *University of Leicester*, **MSc in GIS**  
 **1995 – 1996** *Queens University, Canada*, 1yr Exchange Programme  
-**1993 – 1997** *University of Glasgow*, ***BSc in Geography 2:1 with Honours***  
+**1993 – 1997** *University of Glasgow*, **BSc in Geography 2:1 with Honours**  
 **1986 – 1993** *Cowley High School*, St. Helens
 
 ## Interests
