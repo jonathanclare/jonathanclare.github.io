@@ -62,14 +62,11 @@ Education
 
 Interests
 ------
-**Ski & Snowboarding**
-Member of the Edinburgh Ski Club since 2003. Love to snowboard in both Scotland and The Alps.
 
-**Kitesurfing**
-Took up kitesurfing in 2005 (after hanging up my rugby boots). I was a founder member of the Fife & Edinburgh Kitesurf Club. I'm usually found at Longniddry or Gullane, with occasional trips to places such as Tiree, The Red Sea, Turkey and Tarifa.
+Ive been a member of the Edinburgh Ski Club since 2003 and love to snowboard in both Scotland and The Alps.
 
-**Cycling** 
+I Took up kitesurfing in 2005 (after hanging up my rugby boots). I was a founder member of the Fife & Edinburgh Kitesurf Club. I'm usually found at Longniddry or Gullane, with occasional trips further afield to places such as Tiree, The Red Sea, Turkey and Tarifa.
+
+I enjoy walking around Edinburgh and often can be found heading up Arthurs Seat during my lunch breaks.
+
 I commute by bike. Have mountain biked all over Scotland but still love to get back to Glentress whenever I can.
-
-**Hiking & Walking**
-Enjoy walking around Edinburgh and often can be found on Arthurs Seat during my lunch breaks.
