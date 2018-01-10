@@ -28,7 +28,8 @@ GitHub, Microsoft Team Foundation Server
 **Image Editors**  
 GIMP  
 
-## Previous Experience
+Previous Experience
+------
 
 **Coding**  
 Java, Object Oriented Design, JSP, ASP, XML, XSL  
@@ -42,20 +43,23 @@ ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi
 **Relational database design and development**  
 Access  
 
-## Employment
+Employment
+------
 
 **11/01 - present** *Senior Developer*, GeoWise Ltd  
 **09/00 - 11/01** *GIS Officer*, Forest Research  
 **02/99 - 09/00** *GIS Officer*, Scottish Wildlife Trust   
 **09/98 - 02/99** *GIS Developer*, Mapix Technologies Ltd
 
-## Education
+Education
+------
 
 **1997 – 1998** *University of Leicester*, **MSc in GIS**  
 **1995 – 1996** *Queens University, Canada*, 1yr Exchange Programme  
 **1993 – 1997** *University of Glasgow*, **BSc in Geography 2:1 with Honours**  
 **1986 – 1993** *Cowley High School*, St. Helens
 
-## Interests
+Interests
+------
 Snowboarding  
 Kitesurfing 
