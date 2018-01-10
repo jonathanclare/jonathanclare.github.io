@@ -63,7 +63,7 @@ Education
 Interests
 ------
 
-Ive been a member of the Edinburgh Ski Club since 2003 and love to snowboard in both Scotland and The Alps.
+I've been a member of the Edinburgh Ski Club since 2003 and love to snowboard in both Scotland and The Alps.
 
 I took up kitesurfing in 2005 (after hanging up my rugby boots). I was a founder member of the Fife & Edinburgh Kitesurf Club. I'm usually found at Longniddry or Gullane, with the occasional trip further afield to places such as Tiree, The Red Sea, Turkey and Tarifa.
 
