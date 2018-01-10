@@ -19,10 +19,14 @@ Nationality: British
 
 ## Previous Experience
 
-**Coding** Java, JSP, ASP, XML, XSL  
-**Data Visualization** ActionScript, Flex, Tcl/Tk  
-**GIS**  ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi  
-**Relational database design and development** Access, MySQL  
+**Coding**  
+Java, Object Oriented Design, JSP, ASP, XML, XSL  
+**Data Visualization**  
+ActionScript, Flex, Tcl/Tk  
+**GIS**  
+ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi  
+**Relational database design and development**  
+Access, MySQL  
 
 ## Employment
 
