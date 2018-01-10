@@ -61,5 +61,4 @@ Education
 
 Interests
 ------
-Snowboarding  
-Kitesurfing 
+Snowboarding, Kitesurfing, Cycling, Hiking
