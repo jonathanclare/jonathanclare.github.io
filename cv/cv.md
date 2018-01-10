@@ -1,4 +1,5 @@
-# Jonathan Clare
+Jonathan Clare
+======
 
 16/15 Tay Street  
 Edinburgh  
@@ -9,7 +10,8 @@ jonathan.david.clare@gmail.com
 Date of Birth: 03/11/74  
 Nationality: British
 
-## Current Expertise
+Current Expertise
+------
 
 **Coding**  
 Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery  
@@ -38,7 +40,7 @@ ActionScript, Flex, Tcl/Tk
 ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi  
 
 **Relational database design and development**  
-Access, MySQL  
+Access  
 
 ## Employment
 
