@@ -47,10 +47,10 @@ Access
 Employment
 ------
 
-**11/01 - present** *Senior Developer*, GeoWise Ltd  
-**09/00 - 11/01** *GIS Officer*, Forest Research  
-**02/99 - 09/00** *GIS Officer*, Scottish Wildlife Trust   
-**09/98 - 02/99** *GIS Developer*, Mapix Technologies Ltd
+**11/01 - present** *Senior Developer*, [GeoWise Ltd](https://www.instantatlas.com/)  
+**09/00 - 11/01** *GIS Officer*, [Forest Research](https://www.forestry.gov.uk/forestresearch)  
+**02/99 - 09/00** *GIS Officer*, [Scottish Wildlife Trust](https://scottishwildlifetrust.org.uk/)  
+**09/98 - 02/99** *GIS Developer*, [Mapix Technologies Ltd](http://www.routescene.com/)
 
 Education
 ------
@@ -62,4 +62,14 @@ Education
 
 Interests
 ------
-Snowboarding, Kitesurfing, Cycling, Hiking
+**Ski & Snowboarding**
+Member of the Edinburgh Ski Club since 2003. Love to snowboard in both Scotland and The Alps.
+
+**Kitesurfing**
+Took up kitesurfing in 2005 (after hanging up my rugby boots). I was a founder member of the Fife & Edinburgh Kitesurf Club. I'm usually found at Longniddry or Gullane, with occasional trips to places such as Tiree, The Red Sea, Turkey and Tarifa.
+
+**Cycling** 
+I commute by bike. Have mountain biked all over Scotland but still love to get back to Glentress whenever I can.
+
+**Hiking & Walking**
+Enjoy walking around Edinburgh and often can be found on Arthurs Seat during my lunch breaks.
