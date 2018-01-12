@@ -5,33 +5,22 @@ Jonathan Clare
 Edinburgh  
 EH111EB
 
-Email jonathan.david.clare@gmail.com  
-Web https://jonathanclare.github.io/  
-GitHub https://github.com/jonathanclare  
-Date of Birth **03/11/74**  
-Nationality **British**
+**Email** jonathan.david.clare@gmail.com  
+**Web** https://jonathanclare.github.io/  
+**GitHub** https://github.com/jonathanclare  
+**Date of Birth** 03/11/74   
+**Nationality** Britis
 
-Currently working at Geowise, I design and develop web apps and pages which generally focus on or are related to data visualization and mapping.
-I have over 20 years experience working in the GIS and Web Development fields. For examples of my work please see 
-my webpage at https://jonathanclare.github.io/
+Currently working at Geowise as a senior developer. I design and develop web apps and pages which generally focus on or are related to data visualization and mapping. I have over 20 years experience working in the GIS and Web Development fields. For examples of my work please see my webpage at https://jonathanclare.github.io/
 
 Proficient in
 ------
 
-**Coding**  
-Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery  
-
-**Data Visualization**  
-SVG, HTML5 Canvas  
-
-**GIS**  
-ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
-
-**Source Control**  
-GitHub, Microsoft Team Foundation Server
-
-**Image Editors**  
-GIMP  
+**Coding** Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery  
+**Data Visualization** SVG, HTML5 Canvas  
+**GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
+**Source Control** GitHub, Microsoft Team Foundation Server
+**Image Editors** GIMP  
 
 Worked in
 ------
@@ -52,7 +41,7 @@ Employment
 ------
 
 **11/01 - present** *Senior Developer*, [GeoWise Ltd](https://www.instantatlas.com/)  
-I design and develop web apps and web pages which generally focus on or are related to data visualization and mapping.
+I design and develop web apps and pages which generally focus on or are related to data visualization and mapping.
 
 **09/00 - 11/01** *GIS Officer*, [Forest Research](https://www.forestry.gov.uk/forestresearch)  
 I supported a number of projects, within the Woodland Ecology Branch, by providing both GIS and programming expertise. The work involved developing new GIS applications and manipulating environmental datasets to apply models of ecological site classification, landscape ecology, biodiversity and wildlife use to forests in Britain.
