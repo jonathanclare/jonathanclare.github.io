@@ -180,12 +180,9 @@ var jcSlideShow = (function ($, window, document, undefined)
         {
             var src = elt.getAttribute('data-src');
             var title = elt.getAttribute('data-title');
+            var url = elt.getAttribute('data-url');
 
-            $.on(elt, 'click', function(evt)
-            {
-                console.log(evt.target);
-                oSlideshow.open(evt.target.getAttribute('data-src'));
-            });
+            $.on(elt, 'click', function(evt) {oSlideshow.open(evt.target.getAttribute('data-src'));});
 
             var slideShowIcon = document.createElement('div');
             $.addClass(slideShowIcon, 'slideshow-icon')
@@ -197,9 +194,18 @@ var jcSlideShow = (function ($, window, document, undefined)
                 strHtml += '<div class="slideshow-slide">';
 
                     strHtml += '<div class="slideshow-img flex-box">';
-                        strHtml += '<img src="'+src+'" alt="'+title+'" />';
+                        if (title !== null) 
+                            strHtml += '<img src="'+src+'" alt="'+title+'" />';
+                        else 
+                            strHtml += '<img src="'+src+'" />';
                     strHtml += '</div>';
-                    strHtml += '<div class="slideshow-text">'+title+'</div>';
+                    if (title !== null) 
+                    {
+                        if (url !== null)
+                            strHtml += '<div class="slideshow-text"><a class="slideshow-link" href="'+url+'" target="_blank">'+title+'</a></div>';
+                        else
+                            strHtml += '<div class="slideshow-text">'+title+'</div>';
+                    }
                 strHtml += '</div>';
         });
 
