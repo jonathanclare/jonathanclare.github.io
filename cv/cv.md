@@ -11,6 +11,10 @@ GitHub https://github.com/jonathanclare
 Date of Birth **03/11/74**  
 Nationality **British**
 
+Currently working at Geowise I design and develop web apps and web pages which generally focus on or are related to data visualization and mapping.
+I have over 20 years experience working in the GIS and Web Development fields. For examples of my work please see 
+my webpage at https://jonathanclare.github.io/
+
 Proficient in
 ------
 
@@ -48,7 +52,7 @@ Employment
 ------
 
 **11/01 - present** *Senior Developer*, [GeoWise Ltd](https://www.instantatlas.com/)  
-
+I design and develop web apps and web pages which generally focus on or are related to data visualization and mapping.
 
 **09/00 - 11/01** *GIS Officer*, [Forest Research](https://www.forestry.gov.uk/forestresearch)  
 I supported a number of projects, within the Woodland Ecology Branch, by providing both GIS and programming expertise. The work involved developing new GIS applications and manipulating environmental datasets to apply models of ecological site classification, landscape ecology, biodiversity and wildlife use to forests in Britain.
