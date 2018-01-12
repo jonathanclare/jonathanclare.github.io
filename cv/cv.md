@@ -11,7 +11,7 @@ GitHub https://github.com/jonathanclare
 Date of Birth **03/11/74**  
 Nationality **British**
 
-Current Expertise
+Proficient in
 ------
 
 **Coding**  
@@ -29,7 +29,7 @@ GitHub, Microsoft Team Foundation Server
 **Image Editors**  
 GIMP  
 
-Previous Experience
+Worked in
 ------
 
 **Coding**  
