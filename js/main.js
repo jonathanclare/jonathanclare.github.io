@@ -11,15 +11,14 @@ var jcDOM = (function (window, document, undefined)
             var topOfScreen = this.pageTopOffset() - buffer;
             var bottomOfScreen = this.pageBottomOffset() + buffer;
 
-            [].forEach.call(document.querySelectorAll('[data-src]'), function(elt) 
+            [].forEach.call(document.querySelectorAll('[data-src]:not(.loaded)'), function(elt) 
             {
                 var topOfElement = this.offset(elt);
                 var bottomOfElement = this.offset(elt) + this.bounds(elt).height;
-
                 if((bottomOfScreen > topOfElement) && (topOfScreen < bottomOfElement))
                 {
                     var src = elt.getAttribute('data-src');
-                    elt.removeAttribute('data-src');
+                    this.addClass(elt, 'loaded');
                     if (elt.nodeName == 'IMG')
                     {
                         elt.setAttribute('src', src);
@@ -182,12 +181,11 @@ var jcSlideShow = (function ($, window, document, undefined)
             var src = elt.getAttribute('data-src');
             var title = elt.getAttribute('data-title');
 
-            (function (_oSlideshow, _src) {
-                $.on(elt, 'click', function(e)
-                {
-                    _oSlideshow.open(_src);
-                });
-            })(oSlideshow, src);
+            $.on(elt, 'click', function(evt)
+            {
+                console.log(evt.target);
+                oSlideshow.open(evt.target.getAttribute('data-src'));
+            });
 
             var slideShowIcon = document.createElement('div');
             $.addClass(slideShowIcon, 'slideshow-icon')
@@ -363,10 +361,13 @@ var jcSlideShow = (function ($, window, document, undefined)
     window.onload = function () 
     { 
         var slideshow = new jcSlideShow();
-        $.lazyLoadImages();
-        $.on(window, 'scroll resize', function ()
-        {
-            $.lazyLoadImages();
-        });
+        onScroll();
+        $.on(window, 'scroll resize', $.debounce(onScroll));
     } 
+
+    function onScroll()
+    {
+        $.lazyLoadImages();
+    }
+
 }) (jcDOM, window, document);
