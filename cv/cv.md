@@ -9,7 +9,7 @@ EH111EB
 **Web** https://jonathanclare.github.io/  
 **GitHub** https://github.com/jonathanclare  
 **Date of Birth** 03/11/74   
-**Nationality** Britis
+**Nationality** British
 
 I currently work at [GeoWise Ltd](https://www.instantatlas.com/) as a senior developer. I mostly design and develop web apps and pages which generally focus on or are related to data visualization and mapping. I have over 20 years experience working in the GIS and Web Development fields. For examples of my work please see my webpage at https://jonathanclare.github.io/
 
