@@ -19,23 +19,16 @@ Proficient in
 **Coding** Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery  
 **Data Visualization** SVG, HTML5 Canvas  
 **GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
-**Source Control** GitHub, Microsoft Team Foundation Server
+**Source Control** GitHub, Microsoft Team Foundation Server  
 **Image Editors** GIMP  
 
 Worked in
 ------
 
-**Coding**  
-Java, Object Oriented Design, JSP, ASP, XML, XSL  
-
-**Data Visualization**  
-ActionScript, Flex, Tcl/Tk  
-
-**GIS**  
-ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi  
-
-**Relational database design and development**  
-Access  
+**Coding** Java, Object Oriented Design, JSP, ASP, XML, XSL  
+**Data Visualization** ActionScript, Flex, Tcl/Tk  
+**GIS** ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi  
+**Relational database design and development** Access  
 
 Employment
 ------
@@ -52,7 +45,6 @@ I was responsible for the implementation and development of a new GIS system to 
 **09/98 - 02/99** *GIS Developer*, [Mapix Technologies Ltd](http://www.routescene.com/)  
 I developed a GIS application to process and package hydrographic data sets.
 
-
 Education
 ------
 
@@ -68,6 +60,6 @@ I've been a member of the Edinburgh Ski Club since 2003 and love to snowboard in
 
 I took up kitesurfing in 2005 (after hanging up my rugby boots). I was a founder member of the Fife & Edinburgh Kitesurf Club. I'm usually found at Longniddry or Gullane, with the occasional trip further afield to places such as Tiree, The Red Sea, Turkey and Tarifa.
 
-I enjoy walking and finding new places around Edinburgh and during my lunch breaks can often be found rambling around Arthurs Seat.
+I enjoy walking and finding new places around Edinburgh and during my lunch breaks can often be found rambling around Arthurs Seat. I also enjoy the occcasional trip to the highlands for both low and high level walks.
 
 When not walking Im usually cycling. I commute by bike. I've mountain biked all over Scotland but still love to get back to Glentress whenever I can.
