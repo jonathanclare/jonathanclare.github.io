@@ -129,6 +129,25 @@ var jcDOM = (function (window, document, undefined)
                 timeout = setTimeout(later, wait || 250);
                 if (callNow) func.apply(me, args);
             };
+        },
+
+        transitionEnd : function ()
+        {
+            var el = document.createElement('fakeelement');
+            var transitions = 
+            {
+                'transition':'transitionend',
+                'OTransition':'oTransitionEnd',
+                'MozTransition':'transitionend',
+                'WebkitTransition':'webkitTransitionEnd'
+            }
+            for (var t in transitions)
+            {
+                if (el.style[t] !== undefined)
+                {
+                    return transitions[t];
+                }
+            }
         }
     }
     return o;
@@ -139,7 +158,7 @@ var jcSlideShow = (function ($, window, document, undefined)
 {
     'use strict';
 
-    var keyDown, touchStart, touchMove, xDown = null;
+    var keyDown, touchStart, touchMove, fadeOut, transitionEnd,  xDown = null;
 
     var Slideshow = function (options)
     {
@@ -148,6 +167,8 @@ var jcSlideShow = (function ($, window, document, undefined)
         keyDown  = onKeyDown.bind(this);
         touchStart = onTouchStart.bind(this);
         touchMove = onTouchMove.bind(this);
+        fadeOut = onClose.bind(this);
+        transitionEnd = $.transitionEnd();
 
         return this;
     };
@@ -190,7 +211,7 @@ var jcSlideShow = (function ($, window, document, undefined)
         strHtml += '<div class="slideshow-close flex-box" role="button" tabindex="0">&times;</div>';
 
         var parent = document.createElement('div');
-        $.addClass(parent, 'slideshow')
+        $.addClass(parent, 'slideshow slideshow-hidden')
         parent.innerHTML = strHtml;
         $.on(parent, 'click', function (e)
         {
@@ -207,12 +228,15 @@ var jcSlideShow = (function ($, window, document, undefined)
     {
         if (this._container !== null)
         {
+            $.off(this._container, transitionEnd, fadeOut);
             $.on(document, 'keydown', keyDown);
             $.on(document, 'touchstart', touchStart);
             $.on(document, 'touchmove', touchMove);
 
             $.addClass(document.body, 'slideshow-hide-scrollbars');
             if (src !== undefined) this.show(src);
+
+            $.removeClass(this._container, 'slideshow-hidden');
             $.addClass(this._container, 'slideshow-active');
         }
         return this;
@@ -222,10 +246,10 @@ var jcSlideShow = (function ($, window, document, undefined)
     {
         if (this._container !== null)
         {
+            $.on(this._container, transitionEnd, fadeOut);
             $.off(document, 'keydown', keyDown);
             $.off(document, 'touchstart', touchStart);
             $.off(document, 'touchmove', touchMove);
-            $.removeClass(document.body, 'slideshow-hide-scrollbars');
             $.removeClass(this._container, 'slideshow-active');
         }
         return this;
@@ -285,6 +309,12 @@ var jcSlideShow = (function ($, window, document, undefined)
         var s = this.activeSlide();
         return (s.previousElementSibling !== null ? s.previousElementSibling : s.parentNode.lastElementChild);
     }     
+
+    function onClose (evt) 
+    {          
+        $.addClass(evt.target, 'slideshow-hidden');
+        $.removeClass(document.body, 'slideshow-hide-scrollbars');                              
+    }     
      
     function onTouchStart (evt) 
     {             
@@ -296,7 +326,7 @@ var jcSlideShow = (function ($, window, document, undefined)
         if (!xDown) return;
         var xUp = evt.touches[0].clientX;     
         var xDiff = xDown - xUp;
-        if ( xDiff > 0 ) this.next();
+        if (xDiff > 0) this.next();
         else  this.prev();
         xDown = null;
     }
@@ -333,12 +363,10 @@ var jcSlideShow = (function ($, window, document, undefined)
     window.onload = function () 
     { 
         var slideshow = new jcSlideShow();
-        onScroll();
-        $.on(window, 'scroll resize', $.debounce(onScroll));
-    } 
-
-    function onScroll()
-    {
         $.lazyLoadImages();
-    }
+        $.on(window, 'scroll resize', function ()
+        {
+            $.lazyLoadImages();
+        });
+    } 
 }) (jcDOM, window, document);
