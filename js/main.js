@@ -24,7 +24,7 @@ var jcDOM = (function (window, document, undefined)
                         elt.setAttribute('src', src);
                         elt.onload = function() 
                         {
-                            this.addClass(elt, 'bg-img-complete');
+                            this.addClass(elt, 'bg-img-fadein');
                         }.bind(this);
                     }
                     else
@@ -34,7 +34,7 @@ var jcDOM = (function (window, document, undefined)
                         img.onload = function() 
                         {
                             elt.style.backgroundImage = 'url(' + src + ')';
-                            this.addClass(elt, 'bg-img-complete');
+                            this.addClass(elt, 'bg-img-fadein');
                         }.bind(this);
                     }
                 }

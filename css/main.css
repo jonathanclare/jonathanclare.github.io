@@ -109,7 +109,7 @@ section
     background-position: 50% 50%;
     transition: opacity 0.3s;
 }
-.bg-img-complete
+.bg-img-fadein
 {
     opacity: 1;
 }
