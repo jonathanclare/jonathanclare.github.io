@@ -16,7 +16,7 @@ I currently work at [GeoWise Ltd](https://www.instantatlas.com/) as a senior dev
 Proficient in
 ------
 
-**Coding** Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery  
+**Coding** Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery, Handlebars  
 **Data Visualization** SVG, HTML5 Canvas  
 **GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
 **Source Control** GitHub, Microsoft Team Foundation Server  
