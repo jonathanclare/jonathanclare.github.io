@@ -56,7 +56,7 @@ I supported a number of projects, within the Woodland Ecology Branch, by providi
 **02/99 - 09/00** *GIS Officer*, [Scottish Wildlife Trust](https://scottishwildlifetrust.org.uk/)  
 I was responsible for the implementation and develpoment of a new GIS system to map and record information about Wildlife Sites throughout Scotland.
 
-**09/98 - 02/99** *GIS Developer*, [Mapix Technologies Ltd](http://www.routescene.com/)
+**09/98 - 02/99** *GIS Developer*, [Mapix Technologies Ltd](http://www.routescene.com/)  
 I developed a GIS application to process and package hydrographic data sets.
 
 
