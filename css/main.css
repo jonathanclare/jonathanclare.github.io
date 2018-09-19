@@ -42,7 +42,7 @@ body
     border:solid 1px #ddd;
     width:100%;
     height: auto;
-    max-width:200px;
+    max-width:250px;
 }
 
 /* Sections */
@@ -178,7 +178,7 @@ section:not(:first-child)
     }
     .profile-img
     {
-        width:200px;
+        width:250px;
     }
     .profile-info
     { 
