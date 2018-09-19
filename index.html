@@ -32,10 +32,6 @@
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="./css/main.css"  />
-
-        <!-- JavaScript -->
-        <script src="./js/modernizr-custom.js"></script>
-        <script src="./js/main.js"></script>
     </head>
     <body>
 	    <!-- Main content -->
@@ -44,13 +40,19 @@
             <!-- Intro -->
             <section>
                 <div class="section">
-                    <div class="section-header">Jonathan Clare - Web Development / Data Visualization / Mapping</div>
+                    <div class="section-header">Jonathan Clare</div>
+                    <div class="section-sub-header">Web Development / Data Visualization / Mapping</div>
                     <div class="section-description">
-                        <p><a href="mailto:jonathan.david.clare@gmail.com">jonathan.david.clare@gmail.com</a></p>
-                        <p>Working as a senior developer at <a target="_blank" href="http://www.instantatlas.com/">Geowise</a></p>
-                        <p>CV 
-                        <a href="https://github.com/jonathanclare/jonathanclare.github.io/blob/master/cv/cv.md">md</a> 
-                        &nbsp;|&nbsp;<a href="./cv/cv.pdf">pdf</a></p>
+                        <div class="profile flex-box">
+                            <div class="profile-pic"> <img class="profile-img" src="./img/jc.png" /></div>
+                            <div class="profile-info">
+                                <p><a href="mailto:jonathan.david.clare@gmail.com">jonathan.david.clare@gmail.com</a></p>
+                                <p>CV <a href="https://github.com/jonathanclare/jonathanclare.github.io/blob/master/cv/cv.md">md</a>&nbsp;|&nbsp;<a href="./cv/cv.pdf">pdf</a></p>
+                                <p>
+                                    I currently work at <a target="_blank" href="http://www.instantatlas.com/">Geowise</a> as a senior developer. I mostly design and develop web apps and pages which generally focus on data visualization and mapping. I have over 20 years experience working in the GIS and Web Development fields.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -58,33 +60,29 @@
             <!-- Work -->
             <section>
                 <div class="section">
-                    <div class="section-header">Work</div>
-                    <div class="section-description">Projects I am or have been involved with at Geowise</div>
+                    <div class="section-header">Portfolio</div>
+                    <div class="section-description">Projects I am or have been involved with whilst at Geowise</div>
                     <div class="screenshots flex-box">
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/designer.png" data-title="InstantAtlas Desktop Designer" data-url="https://online.instantatlas.com/designer/"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" href="https://online.instantatlas.com/designer/" target="_blank">InstantAtlas Desktop Designer (under development)</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/ia1.png" data-title="InstantAtlas Desktop" data-url="./iadesktop.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" href="./iadesktop.html">InstantAtlas Desktop</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/mariecurie.png" data-title="InstantAtlas Desktop - Customers" data-url="./iacustomers.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" href="./iacustomers.html">InstantAtlas Desktop - Customers</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/db-builder.png" data-title="Online Dashboard Builder" data-url="./dashboard.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" href="./dashboard.html">Online Dashboard Builder</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/croydon.png" data-title="Map Explorer" data-url="./explorer.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" href="./explorer.html">Map Explorer</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/ecdc1.png" data-title="European Centre for Disease Prevention and Control" data-url="./ecdc.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" href="./ecdc.html">European Centre for Disease Prevention and Control</a></div>
-                        </div>
+                        <a class="screenshot" href="./iadesktop.html" title="InstantAtlas Desktop">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ia1.png')"></div></div>
+                            <div class="screenshot-text">InstantAtlas Desktop</div>
+                        </a>
+                        <a class="screenshot" href="./dashboard.html" title="Online Dashboard Builder">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/db-builder.png')"></div></div>
+                            <div class="screenshot-text">Online Dashboard Builder</div>
+                        </a>
+                        <a class="screenshot" href="https://online.instantatlas.com/designer/" target="_blank" title="InstantAtlas Desktop Designer">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/designer.png')"></div></div>
+                            <div class="screenshot-text">InstantAtlas Designer</div>
+                        </a>
+                        <a class="screenshot" href="./explorer.html" title="Map Explorer">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/croydon.png')"></div></div>
+                            <div class="screenshot-text">Map Explorer</div>
+                        </a>
+                        <a class="screenshot" href="./ecdc.html" title="European Centre for Disease Prevention and Control">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ecdc1.png')"></div></div>
+                            <div class="screenshot-text">European Centre for Disease Prevention and Control</div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -92,21 +90,17 @@
             <!-- Other -->
             <section>
                 <div class="section">
-                    <div class="section-header">Side Projects</div>
+                    <div class="section-header">Other</div>
                     <div class="section-description">A couple of other websites created in my own time</div>
                     <div class="screenshots flex-box">
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/snow-scotland.png" data-title="Ski Scotland" data-url="./ski.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" href="./ski.html">Ski Scotland</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/quintadevodra.png" data-title="Quinta de Vodra" data-url="./quinta.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" href="./quinta.html">Quinta de Vodra</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/esc.png" data-title="Edinburgh Ski Club" data-url="http://www.edinburghskiclub.org.uk/"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" href="http://www.edinburghskiclub.org.uk/" target="_blank">Edinburgh Ski Club</a></div>
-                        </div>
+                        <a class="screenshot" href="./ski.html" title="Ski Scotland">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/snow-scotland.png')"></div></div>
+                            <div class="screenshot-text">Snow Scotland</div>
+                        </a>
+                        <a class="screenshot" href="./quinta.html" title="Quinta de Vodra">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/quintadevodra.png')"></div></div>
+                            <div class="screenshot-text">Quinta de Vodra</div>
+                        </a>
                     </div>
                 </div>
             </section>

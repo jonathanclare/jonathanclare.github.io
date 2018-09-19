@@ -32,10 +32,6 @@
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="./css/main.css"  />
-
-        <!-- JavaScript -->
-        <script src="./js/modernizr-custom.js"></script>
-        <script src="./js/main.js"></script>
     </head>
     <body>
         <!-- Main content -->
@@ -45,36 +41,110 @@
             <section>
                 <div class="section">
                     <div class="section-header">InstantAtlas Desktop</div>
-                    <div class="section-description"><a target="_blank" href="http://www.instantatlas.com/">InstantAtlas Desktop</a> is a set of tools for designing, populating and publishing dashboards to the web. I worked on the dashboards that our customers used to visualize their data. I was solely responsible for the design and development of the functionality, mapping, charting and components contained in the dashboards. Initially developed using Flex and ActionScript the dashboards were subsequently rebuilt from the ground up for modern browsers and devices using JavaScript, Jquery, HTML5 Canvas and SVG.</div>
+                    <div class="section-description"><a target="_blank" href="http://www.instantatlas.com/">InstantAtlas Desktop</a> is a set of tools for designing, populating and publishing dashboards to the web. I was solely responsible for the design and development of the functionality, mapping, charting and components contained in the dashboards. Initially developed using Flex and ActionScript the dashboards were subsequently rebuilt from the ground up for modern browsers and devices using JavaScript, Jquery, HTML5 Canvas and SVG.</div>
                     <div class="screenshots flex-box">
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/ia1.png" data-title="Time Series Line Chart" data-url="./ia/sm/atlas.html?indicator=i1&date=2008"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" target="_blank" href="./ia/sm/atlas.html?indicator=i1&date=2008">Time Series</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/ia3.png" data-title="Box &amp; Whisker Chart" data-url="./ia/sm_box_and_whisker/atlas.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" target="_blank" href="./ia/sm_box_and_whisker/atlas.html">Box &amp; Whisker Chart</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/ia4.png" data-title="Funnel Plot" data-url="./ia/sp_funnel_plot/atlas.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" target="_blank" href="./ia/sp_funnel_plot/atlas.html">Funnel Plot</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/ia5.png" data-title="Bubble Plot" data-url="./ia/sp_standard_bubble/atlas.html"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" target="_blank" href="./ia/sp_standard_bubble/atlas.html">Bubble Plot</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/ia6.png" data-title="Performance Chart" data-url="./ia/ap_performance/atlas.html?select=33UBHU"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" target="_blank" href="./ia/ap_performance/atlas.html?select=33UBHU">Performance Chart</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/ia7.png" data-title="Scatter Plot" data-url="./ia/dm/atlas.html?indicator2=i1&date2=20088"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" target="_blank" href="./ia/dm/atlas.html?indicator2=i1&date2=2008">Scatter Plot</a></div>
-                        </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img"><div class="slide bg-img ratio-16-9" data-src="./img/ia8.png" data-title="Side by Side Map Comparison" data-url="./ia/dmts_synchronised_data/atlas.html?indicator=i1&date=2008&indicator2=i2&date2=2008"></div></div>
-                            <div class="screenshot-text"><a class="screenshot-link" target="_blank" href="./ia/dmts_synchronised_data/atlas.html?indicator=i1&date=2008&indicator2=i2&date2=2008">Side by Side Map Comparison</a></div>
-                        </div>
+                        <a class="screenshot" title="Time Series Line Chart" target="_blank" href="./ia/sm/atlas.html?indicator=i1&date=2008">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ia1.png')"></div></div>
+                            <div class="screenshot-text">Time Series</div>
+                        </a>
+                        <a class="screenshot" title="Box &amp; Whisker Chart" target="_blank" href="./ia/sm_box_and_whisker/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ia3.png')"></div></div>
+                            <div class="screenshot-text">Box &amp; Whisker Chart</div>
+                        </a>
+                        <a class="screenshot" title="Funnel Plot" target="_blank" href="./ia/sp_funnel_plot/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ia4.png')"></div></div>
+                            <div class="screenshot-text">Funnel Plot</div>
+                        </a>
+                        <a class="screenshot" title="Bubble Plot" target="_blank" href="./ia/sp_standard_bubble/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ia5.png')"></div></div>
+                            <div class="screenshot-text">Bubble Plot</div>
+                        </a>
+                        <a class="screenshot" title="Performance Chart" target="_blank" href="./ia/ap_performance/atlas.html?select=33UBHU">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ia6.png')"></div></div>
+                            <div class="screenshot-text">Performance Chart</div>
+                        </a>
+                        <a class="screenshot" title="Scatter Plot" target="_blank" href="./ia/dm/atlas.html?indicator2=i1&date2=2008">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ia7.png')"></div></div>
+                            <div class="screenshot-text">Scatter Plot</div>
+                        </a>
+                        <a class="screenshot" title="Side by Side Map Comparison" target="_blank" href="./ia/dmts_synchronised_data/atlas.html?indicator=i1&date=2008&indicator2=i2&date2=2008">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ia8.png')"></div></div>
+                            <div class="screenshot-text">Side by Side Map Comparison</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- IA Customers section -->
+            <section>
+                <div class="section">
+                    <div class="section-header">InstantAtlas Customers</div>
+                    <div class="section-description">Hundreds of customers have used the software to create their own dashboards and data visualisations. Here is a selection.</div>
+                    <div class="screenshots flex-box">
+                        <a class="screenshot" target="_blank" title="Centers of Disease Control and Prevention" href="https://www.cdc.gov/flu/fluvaxview/reportshtml/reporti1314/reporti/index.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/cdc.png')"></div></div>
+                            <div class="screenshot-text">Centers of Disease Control and Prevention</div>
+                        </a>
+                        <a class="screenshot" target="_blank"" title="Region Nordjylland" href="https://extapps.rn.dk/SundhedsatlasFiles/Sundhedsatlas_Forbrug_V12_HTML/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/rn.png')"></div></div>
+                            <div class="screenshot-text">Region Nordjylland</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Marie Curie" href="http://apps.mariecurie.org.uk/marie-curie-atlas/html5/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/mariecurie.png')"></div></div>
+                            <div class="screenshot-text">Marie Curie</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="NHS" href="http://ccgtools.england.nhs.uk/ccgoutcomes/html/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/nhs.png')"></div></div>
+                            <div class="screenshot-text">NHS</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Kent Public Health Observatory" href="http://atlas.kpho.org.uk/">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/kpho.png')"></div></div>
+                            <div class="screenshot-text">Kent Public Health Observatory</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="National End of Life Care" href="http://www.endoflifecare-intelligence.org.uk/profiles/CCGs/Cause_of_Death/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/endoflifecare.png')"></div></div>
+                            <div class="screenshot-text">National End of Life Care</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Bremen Stadt" href="http://www.statistik-bremen.de/tabellen/kleinraum/ortsteilatlas/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/bremen.png')"></div></div>
+                            <div class="screenshot-text">Bremen Stadt</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Maternal and Child Health Equity" href="http://machequity.com/dashboards/ml_uni_dashboard.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/machequity.png')"></div></div>
+                            <div class="screenshot-text">Maternal and Child Health Equity</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="GEKID" href="http://www.gekid.de/Atlas/CurrentVersion/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/gekid.png')"></div></div>
+                            <div class="screenshot-text">GEKID</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Age UK" href="http://data.ageuk.org.uk/loneliness-maps/england-2016/?indicator=i0&prop_legendClassifier=quantile&pal_defaultPaletteId=Sequential%20Cyan&pal_defaultSchemeId=categoricScheme1&pal_noClasses=5&bbox=-1062740.2413044022,6273835.247371395,544789.2213044025,7670112.402628604">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/ageuk.png')"></div></div>
+                            <div class="screenshot-text">Age UK</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Metropolregion Rhein-Neckar" href="http://www.raumbeobachtung-rhein-neckar.de/WIAS/atlas.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/raumbeobachtung.png')"></div></div>
+                            <div class="screenshot-text">Metropolregion Rhein-Neckar</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Statistik Jena" href="http://statistik.jena.de/ia/stadtbezirksstatistik.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/jena.png')"></div></div>
+                            <div class="screenshot-text">Statistik Jena</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Statistik Jena" href="http://aquas.gencat.cat/ca/projectes/atles-de-variacions-i-de-qualitat-del-siscat/atles_variacions/atles_finalitzats/atles_oxigenoterapia/atles-digital-de-terapies-respiratories-a-domicili/">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/gencat.png')" title="Statistik Jena"></div></div>
+                            <div class="screenshot-text">AQuAS</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Norfolk County Council" href="http://www.norfolkinsight.org.uk/dataviews/report?reportId=102&viewId=151&geoReportId=10516&geoId=5&geoSubsetId=">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/norfolk.png')"></div></div>
+                            <div class="screenshot-text">Norfolk County Council</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Diabetes Atlas" href="http://www.diabetesatlas.org/across-the-globe.html">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/diabetes.png')"></div></div>
+                            <div class="screenshot-text">Diabetes Atlas</div>
+                        </a>
+                        <a class="screenshot" target="_blank" title="Warwickshire County Council" href="http://maps.warwickshire.gov.uk/iareports/educational_attainment/">
+                            <div class="screenshot-img"><div class="bg-img ratio-16-9" style="background-image:url('./img/warwickshire.png')"></div></div>
+                            <div class="screenshot-text">Warwickshire County Council</div>
+                        </a>
                     </div>
                 </div>
             </section>
