@@ -47,7 +47,9 @@ body
 {
     border:solid 1px #ddd;
     height: auto;
-    width:70px;
+    width:100%;
+    min-width:50px;
+    max-width:100px;
     border-radius: 50%;
 }
 
