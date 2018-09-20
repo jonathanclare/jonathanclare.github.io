@@ -35,11 +35,15 @@ body
 }
 .profile-info
 {
-    flex-flow: column nowrap;
     justify-content: center;
+    flex-flow: column nowrap;
     margin-left:1rem;
 }
 .profile-pic
+{
+    align-items: center;
+}
+.profile-pic > div
 {
     height:auto;
     width:100%;
