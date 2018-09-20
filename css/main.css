@@ -31,18 +31,24 @@ body
 /* Profile */
 .profile
 {
+
+}
+.profile-info
+{
     flex-flow: column nowrap;
+    justify-content: center;
+    margin-left:1rem;
 }
 .profile-pic
 {
-
+    align-items:center;
 }
 .profile-img
 {
     border:solid 1px #ddd;
-    width:100%;
     height: auto;
-    max-width:250px;
+    width:70px;
+    border-radius: 50%;
 }
 
 /* Sections */
@@ -171,18 +177,6 @@ section:not(:first-child)
     .section-sub-header
     {
         font-size:2.5rem;
-    }
-    .profile
-    {
-        flex-flow: row nowrap;
-    }
-    .profile-img
-    {
-        width:250px;
-    }
-    .profile-info
-    { 
-        margin-left:1rem;
     }
 }
 @media all and (min-width: 1024px) /* Laptop - 1024px and larger */
