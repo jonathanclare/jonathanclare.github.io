@@ -42,16 +42,19 @@ body
 .profile-pic
 {
     align-items: center;
-}
-.profile-pic > div
-{
-    height:auto;
-    width:100%;
+    flex:1 1 auto;
     min-width:70px;
     max-width:100px;
 }
+.profile-pic > div
+{
+    width:100%;
+    height:auto;
+}
 .profile-img
 {
+    width:100%;
+    height:auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
