@@ -41,15 +41,16 @@ body
 }
 .profile-pic
 {
-    align-items:center;
+    height:auto;
+    width:100%;
+    min-width:70px;
+    max-width:100px;
 }
 .profile-img
 {
-    border:solid 1px #ddd;
-    height: auto;
-    width:100%;
-    min-width:50px;
-    max-width:100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     border-radius: 50%;
 }
 
