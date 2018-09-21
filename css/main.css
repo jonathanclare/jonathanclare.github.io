@@ -57,14 +57,18 @@ body
     height:auto;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
     border-radius: 50%;
+    cursor:pointer;
 }
 
 /* Sections */
-section:nth-child(odd)
+.banner
 {
     background-color: #f7f7f7;
+}
+section:nth-child(odd)
+{
+    /*background-color: #f7f7f7;*/
 }
 section:not(:first-child)
 {
