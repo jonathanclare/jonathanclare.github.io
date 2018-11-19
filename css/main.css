@@ -108,34 +108,37 @@ section:not(:first-child)
 .screenshot
 {
     flex-flow: column nowrap;
-    border:solid 1px #ccc;
     text-decoration: none;
-    cursor:pointer;
     background-color:#fff;
     flex:1 1 400px;
     margin:1rem;
 }
-.screenshot:hover
-{
-    border:solid 1px #ff7144;
-    color: #ff7144;
-}
-.screenshot:hover .screenshot-text
-{
-    color: #ff7144;
-}
-.screenshot-img
-{
-    margin:0.5rem;
-}
-.screenshot-text
+.screenshot-title
 {
     flex:1;
-    color: #444;
-    font-size:0.8rem;
+    color: #ff7144;
+    font-size:1rem;
     margin:0 0.5rem 0.5rem 0.5rem;
     justify-content: center;
     align-items: center;
+    text-align:center;
+}
+.screenshot-img
+{
+    border:solid 1px #ccc;
+    margin:0.5rem;
+    padding:1rem;
+}
+.screenshot-img:hover
+{
+    border:solid 1px #ff7144;
+}
+.screenshot-text
+{
+    font-style: italic;
+    color: #888;
+    font-size:0.8rem;
+    margin:0 0.5rem 0.5rem 0.5rem;
     text-align:center;
 }
 
