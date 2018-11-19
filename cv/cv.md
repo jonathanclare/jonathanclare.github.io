@@ -16,7 +16,7 @@ I currently work at [GeoWise Ltd](https://www.instantatlas.com/) as a senior dev
 Proficient in
 ------
 
-**Coding** Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery, Handlebars  
+**Coding** React, Redux, Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery, Handlebars, Object Oriented Design  
 **Data Visualization** SVG, HTML5 Canvas
 **GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
 **Source Control** GitHub, Microsoft Team Foundation Server  
@@ -25,7 +25,7 @@ Proficient in
 Prior experience working in
 ------
 
-**Coding** React, Python, Java, Object Oriented Design, JSP, ASP, XML, XSL  
+**Coding** Java, JSP, ASP, XML, XSL  
 **Data Visualization** ActionScript, Flex, Tcl/Tk  
 **GIS** ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi  
 **Relational database design and development** SQL, Access  
@@ -52,14 +52,3 @@ Education
 **1995 – 1996** *Queens University, Canada*, 1yr Exchange Programme  
 **1993 – 1997** *University of Glasgow*, **BSc in Geography 2:1 with Honours**  
 **1986 – 1993** *Cowley High School*, St. Helens
-
-Interests
-------
-
-I've been a member of the Edinburgh Ski Club since 2003 and love to snowboard in both Scotland and The Alps.
-
-I took up kitesurfing in 2005 and was a founder member of the Fife & Edinburgh Kitesurf Club.
-
-I enjoy walking and finding new places around Edinburgh and during my lunch breaks can often be found rambling around Arthurs Seat. I also enjoy the occcasional trip to the highlands for both low and high level walks.
-
-When not walking Im usually cycling. I commute by bike. I've mountain biked all over Scotland but still love to get back to Glentress whenever I can.
