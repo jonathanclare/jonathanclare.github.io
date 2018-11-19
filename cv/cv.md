@@ -17,7 +17,7 @@ Proficient in
 ------
 
 **Coding** React, Redux, Javascript, JSON, HTML, CSS, LESS, Responsive Design, Flexbox, Web App Development, Electron, Grunt, Bootstrap, JQuery, Handlebars, Object Oriented Design  
-**Data Visualization** SVG, HTML5 Canvas
+**Data Visualization** SVG, HTML5 Canvas  
 **GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
 **Source Control** GitHub, Microsoft Team Foundation Server  
 **Image Editors** GIMP  
