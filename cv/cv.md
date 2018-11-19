@@ -11,14 +11,14 @@ EH111EB
 **Date of Birth** 03/11/74   
 **Nationality** British
 
-I currently work at [GeoWise Ltd](https://www.instantatlas.com/) as a senior developer. I mostly design and develop web apps and pages which generally focus on or are related to data visualization and mapping. I have over 20 years experience working in the GIS and Web Development fields. For examples of my work please see my webpage at https://jonathanclare.github.io/
+I currently work at [GeoWise Ltd](https://www.instantatlas.com/) as a senior developer, designing and developing highly interactive, data rich web apps with a focus on visualisation and mapping. I have over 20 years experience working in the GIS and Web Development fields. For examples of my work please see my webpage at [https://jonathanclare.github.io/](https://jonathanclare.github.io/) 
 
 Proficient in
 ------
 
 **Coding** React, React Router, Redux, JavaScript, JSON, Web App Development, Electron, Grunt, JQuery, Handlebars, Object Oriented Design  
 **Web**  HTML, CSS, LESS, SASS, Responsive Design, Flexbox, Bootstrap  
-**Data Visualization** SVG, HTML5 Canvas  
+**Data Visualisation** SVG, HTML5 Canvas  
 **GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
 **Source Control** GitHub, Microsoft Team Foundation Server  
 **Image Editors** GIMP  
@@ -27,7 +27,7 @@ Prior experience working in
 ------
 
 **Coding** Java, JSP, ASP, XML, XSL  
-**Data Visualization** ActionScript, Flex, Tcl/Tk  
+**Data Visualisation** ActionScript, Flex, Tcl/Tk  
 **GIS** ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi  
 **Relational database design and development** SQL, Access  
 
