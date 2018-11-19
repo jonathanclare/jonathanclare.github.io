@@ -181,6 +181,10 @@ section:not(:first-child)
 }
 @media all and (min-width: 768px) /* Tablet - 768px and larger */
 {
+    .screenshot
+    {
+        margin:2rem;
+    }
     .section
     {
         padding: 3rem 0;
