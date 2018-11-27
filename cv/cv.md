@@ -1,34 +1,39 @@
 Jonathan Clare
 ======
 
-16/15 Tay Street  
-Edinburgh  
+16/15 Tay Street</br>
+Edinburgh</br>
 EH111EB
 
-**Email** [jonathan.david.clare@gmail.com](mailto:jonathan.david.clare@gmail.com)  
-**Web** [https://jonathanclare.github.io/](https://jonathanclare.github.io/)  
-**GitHub** [https://github.com/jonathanclare](https://github.com/jonathanclare)  
-**Date of Birth** 03/11/74   
+**Email** [jonathan.david.clare@gmail.com](mailto:jonathan.david.clare@gmail.com)</br>
+**Web** [https://jonathanclare.github.io/](https://jonathanclare.github.io/)</br>
+**GitHub** [https://github.com/jonathanclare](https://github.com/jonathanclare)</br>
+**Date of Birth** 03/11/74</br>
 **Nationality** British
 
-I currently work at [GeoWise Ltd](https://www.instantatlas.com/) as a senior developer, designing and developing highly interactive, data rich web apps with a focus on visualisation and mapping. I have over 20 years experience working in the GIS and Web Development fields. For examples of my work please see my webpage at [https://jonathanclare.github.io/](https://jonathanclare.github.io/) 
+I currently work at [GeoWise Ltd](https://www.instantatlas.com/) as a senior developer, designing and developing highly interactive, data rich web apps with a focus on data visualisation and mapping. I have over 20 years experience working in the GIS and Web Development fields. For examples of my work please see my webpage at [https://jonathanclare.github.io/](https://jonathanclare.github.io/) 
 
 Proficient in
 ------
 
-**Coding** React, React Router, Redux, JavaScript, JSON, Web App Development, Electron, Grunt, JQuery, Handlebars, Object Oriented Design  
-**Web**  HTML, CSS, LESS, SASS, Responsive Design, Flexbox, Bootstrap  
-**Data Visualisation** SVG, HTML5 Canvas  
-**GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API  
-**Source Control** GitHub, Microsoft Team Foundation Server  
-**Image Editors** GIMP  
+**Coding** React, React Router, Redux, JavaScript, ES6, JSON, Web App Development, Electron, Grunt, JQuery, Handlebars, Object Oriented Design, Modular Design</br>
+**Web**  HTML, CSS, LESS, SASS, Responsive Design, CSS Flexbox, Bootstrap</br>
+**Data Visualisation** SVG, HTML5 Canva</br> 
+**GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API</br>
+**Source Control** GitHub, Microsoft Team Foundation Server
 
-Prior experience working in
+Basic understanding of
 ------
 
-**Coding** Java, JSP, ASP, XML, XSL  
-**Data Visualisation** ActionScript, Flex, Tcl/Tk  
-**GIS** ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi  
+**Coding** Python</br>
+**Image Editors** GIMP  
+
+Prior experience working with
+------
+
+**Coding** Java, JSP, ASP, XML, XSL</br>
+**Data Visualisation** ActionScript, Flex, Tcl/Tk</br>
+**GIS** ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi</br>
 **Relational database design and development** SQL, Access  
 
 Employment
