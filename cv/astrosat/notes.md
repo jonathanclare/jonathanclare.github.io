@@ -102,6 +102,13 @@
 * Generate DEMs using googles ElevationService - store points as raster class and render using HTML5 - add generated hHTML5 canvas as new layer to Google maps
 * Add algorithms for deriving new layers from Raster Class - aspect, slope, hillshade
 
+
+### Quinta de Vodra
+http://quintadevodra.com/
+* My partners parents Farm in Portugal
+* Minimalist responsive site that could be updated with basic knowledge of HTML 
+* Set up google account and redirect of URLs and Email,  plus masses of documentation so client could update everything themselves
+
 ### Snow scotland
 http://jonathanclare.github.io/ski.html
 * I wanted all the information about skiing in scotland in one place
@@ -146,8 +153,12 @@ http://jonathanclare.github.io/ski.html
 * Confusion over Microsoft accounts - personal vs work email
 
 
-### Notes App Comments
 
+### Hobbies
+* Testing - light bulb moment - instead of throwing away debugging turn them into tests - realised I was already testing but throwing away the tests
+* Never did a CS degree so still get the occassional "Should I know that"
+* Very front end / creative leaning - like to create things with the tools given to me - weaker on system administration side of things
+* Domain knowledge - can be learned
 
 
 ### Weaknesses
@@ -157,4 +168,8 @@ http://jonathanclare.github.io/ski.html
 * Domain knowledge - can be learned
 
 ### Dev Questions
+
+
+### Notes App Comments
+
 
