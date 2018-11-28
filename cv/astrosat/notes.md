@@ -78,7 +78,7 @@ https://hubtest.instantatlas.com/datastore2/?appid=42ec835a6ff04a9d9566d29795c78
 * React, Redux, React Router, SASS, Responsive Design
 * Just started Travis CI and testing with JEST
 
-#### Case study: ECDC Surveillance Atlas of Infectious Diseases
+## Case study: ECDC Surveillance Atlas of Infectious Diseases
 https://atlas.ecdc.europa.eu/public/index.aspx
 * ECDC were looking for ways to improve the availability and accessibility of their data. I spent several months consulting with a group from ECDC to create a bespoke version of our software for their Surveillance Atlas of Infectious Diseases. The work involved customizing and integrating InstantAtlas Destop with backend GIS and REST API services hosted by ECDC, plus training of their in-house developers.
 * Data REST Api and GIS services were evolving at the same time as the App
@@ -90,7 +90,7 @@ https://atlas.ecdc.europa.eu/public/index.aspx
 * Dealing with politics within the organisation
 * Couple of on site visits to Stockholm
 * Multiple Stakeholders
-* Meetings with individual stakeholders
+* Meetings with individual stakeholders to reassure them
 * In-house developers had to be able to understand and make cahanges to end product
 * Product still in use years later - has since been heavily modified by in-house developers
 
@@ -106,14 +106,14 @@ https://atlas.ecdc.europa.eu/public/index.aspx
 https://jonathanclare.github.io/react-map/
 * Waiting for JavaScript framework winner - plumped for react
 * Built in order to learn React / ES6
-* Generate DEMs using googles ElevationService - store points as raster class and render using HTML5 - add generated hHTML5 canvas as new layer to Google maps
+* Generate DEMs using googles ElevationService - store points as raster class and render using HTML5 Canvas - add canvas as new layer to Google maps
 * Add algorithms for deriving new layers from Raster Class - aspect, slope, hillshade
 
 #### Quinta de Vodra
 http://quintadevodra.com/
 * My partners parents Farm in Portugal
 * Minimalist responsive site that could be updated with basic knowledge of HTML 
-* Set up google account and redirect of URLs and Email,  plus masses of documentation so client could update everything themselves
+* Set up google account and redirect of URLs and Email, plus masses of documentation so they could update everything themselves
 
 #### Snow scotland
 http://jonathanclare.github.io/ski.html
@@ -158,26 +158,12 @@ http://jonathanclare.github.io/ski.html
 * Password confusion - having to contact HQ for new password too often
 * Confusion over Microsoft accounts - personal vs work email
 
-## Hobbies
-* What little time left spend it with family and friends
-* Cycling + Mountain Biking
-* Kitesurfing in warmer months 
-* Snowboard in Winter
-* Walking
-
-## Weaknesses
-* Testing - light bulb moment - instead of throwing away debugging turn them into tests - realised I was already testing but throwing away the tests
-* Never did a CS degree so still get the occassional "Should I know that"
-* Very front end / creative leaning - like to create things with the tools given to me - weaker on system administration side of things
-* Domain knowledge - can be learned
-
 ## Notes App Comments
 
 #### Why I used React / Redux
-* Provides in routing with react router
-* One way binding + central data store = godsend
-* I was developing a react app at the time and being in that mode already enabled me to generate a rapid prototype using alot of the ideas and code that I had availble
-* Plain old JavaScript would have been nigh on impossible to devel something not bug ridden in the time available
+* I was developing a react app at the time and being in that mode already enabled me to generate a rapid prototype using alot of the ideas and code that I had available to me
+* Plain old JavaScript would have been nigh on impossible to develop something not bug ridden in the time available
+* One way binding + central data store + routing = godsend
 
 #### Improvements
 https://jonathanclare.github.io/astrosat-notes-app/
@@ -246,17 +232,26 @@ export const getNote = (state , id) =>
 }
 ```
 
+## Weaknesses
+* Testing - light bulb moment - instead of throwing away debugging turn them into tests - realised I was already testing but throwing away the tests
+* Never did a CS degree so still get the occassional "Should I know that" moment
+* Very front end / creative leaning - like to create things with the tools given to me - weaker on system administration side of things
+* Domain knowledge - can be learned
+
+## Hobbies
+* What little time left spend it with family and friends
+* Cycling + Mountain Biking
+* Kitesurfing in warmer months 
+* Snowboard in Winter
+* Walking
+
 ## Dev Questions
-* Could you tell me about the development team and my role in it
+* Could you tell me more about the makeup of the development team and my role in it.
 * Do you have any examples of recent projects youve worked on.
-* Besides onboarding do you have anything in particular in mind that I would work on?
-* Id like to push forward with ES6 and React - do you use that in-house
-
-
-
+* Besides onboarding what would I be working on
+* Id like to push forward with ES6, HTML5 Canvas, SVG and React - do you use that in-house
 
 ## Admin Questions
-* Looking for a secure long term position
-* Future plans for the business - what is the direction?
+* Looking for a secure long term position - future plans for the business - what is the direction?
 * Pension contributions
 * Showering facilities
