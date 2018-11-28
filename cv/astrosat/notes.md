@@ -87,7 +87,7 @@
 * In-house developers had to be able to understand and make cahanges to end product
 * Product still in use years later - has since been heavily modified by in-house developers
 
-### Side projects
+## Side projects
 
 ### Raspbery Pi
 * Built a Rover (For Alex)
@@ -154,22 +154,22 @@ http://jonathanclare.github.io/ski.html
 
 
 
-### Hobbies
+## Hobbies
 * Testing - light bulb moment - instead of throwing away debugging turn them into tests - realised I was already testing but throwing away the tests
 * Never did a CS degree so still get the occassional "Should I know that"
 * Very front end / creative leaning - like to create things with the tools given to me - weaker on system administration side of things
 * Domain knowledge - can be learned
 
 
-### Weaknesses
+## Weaknesses
 * Testing - light bulb moment - instead of throwing away debugging turn them into tests - realised I was already testing but throwing away the tests
 * Never did a CS degree so still get the occassional "Should I know that"
 * Very front end / creative leaning - like to create things with the tools given to me - weaker on system administration side of things
 * Domain knowledge - can be learned
 
-### Dev Questions
+## Dev Questions
 
 
-### Notes App Comments
+## Notes App Comments
 
 
