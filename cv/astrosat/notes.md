@@ -7,7 +7,6 @@
 * Dissertation - build dashboards using Tcl/Tk to map and chart indicators
 
 ## Career
-
 * Mapix technologies - Built company website. Wrote Avenue scripts in ArcView 3.0 to process and package large hydrographic datasets as shapefiles
 * Scottish Wildlife Trust - GIS Support Officer for mapping of wildlife sites, set up system using ArcView 3.0 for entering and storing wildlife sites in ArcView
 * Forest Research - Created an ArcView 3.0 extension for the Ecological Site Classification - Inputs temperature, moisture deficit, continentality, windiness rasters, generated a suitablilty raster for different tree species. Created a protype Java Applet to do the same - technology wasnt mature enough to roll out - no champion with Forestry Commission to implement in FC GIS System
@@ -81,20 +80,19 @@
 ### ECDC
 
 
+## Coding
+
 ### Front end evolution
 * HTML, CSS, JavaScript (simple functions)
 * ASP, JSP, SVG
 * Actionscript, FLEX
 * JavaScript (prototypal inheritence pattern)
 * JavaScript (modular pattern, immediately invoked functions) 
-* JQuery, JSON, LESS, Responsive Design
+* JQuery, JSON, LESS, HTML5 Canvas, Responsive Design
 * Packaging, Node, NPM, Grunt
 * ES6, React, Redux, React Router, SASS
 
-## Coding
-
 ### JavaScript Common Errors
-
 * undefined | 0 | null | "undefined" | "null" 
 * if (myVariable) {} // 0 doesnt pass - always use if (myVariable !== undefined) {}
 * Use of "==" comparator instead of "===" comparator
@@ -110,7 +108,6 @@
 * Weakly typed - Not catching strings being passed in as numbers - leads to numbers being concatednated strings
 
 ### Visual Studio Issues
-
 * Visual Studio builds - works on one computer not on another
 * Forgetting to add new files to solution leading to broken builds
 * Not full confidence in deployment
@@ -118,10 +115,7 @@
 * Password confusion - having to contact HQ for new password too often
 * Confusion over Microsoft accounts - personal vs work email
 
-
-
 ## Notes App
 
 
-
-## Questions
+## Dev Questions
