@@ -26,18 +26,38 @@
 * Lots of custom work required by clients so code evolved to allow customisation through an API: ECDC, Vodafone, NHS, Data Observatories, Many government agencies
 * Aquired by ESRI.
 
-### Move to cloud
+### Online Dashboard Builder - move to the cloud
 * Tie in with ESRI software - Data Storage using ArcGis Online
-* Online Dashboard Builder created - Online version of IA Desktop. Enable clients to configure, style and save their dashboards online. Started looking at available tools. Package management, Node, NPM, JavaScript (JavaScript Module pattern), LESS, GRUNT. Data stored as feature services in ArcGIS Online.
-* Company at this time was bulding more complex reporting tools. 
+* Online version of IA Desktop. Enable clients to configure, style and save their dashboards online. 
+* Data stored as feature services in ArcGIS Online.
+* Package management, Node, NPM, JavaScript (JavaScript Module pattern), LESS, GRUNT, HANDLEBARS.
+* Integrate legacy dashboard code.
+
+### Reporting Tools
+* Company at this time was building more complex reporting tools. 
 * Combined all reporting tools into Online Offering
 * Clients have trouble sourcing and storing their data
-* Build up data store in ArcGIS Online - mastertable storesd as feature service. Combine reporting tools and webapps behind a wordpress front end allowing clients to configure at the wordpress level.
+* Build up data catalogue in ArcGIS Online - mastertable stored as feature service. 
+* Combine reporting tools and webapps behind a wordpress front end allowing clients to configure at the wordpress level.
 
 ### Map Explorer
 * https://www.suffolkobservatory.info/economy-employment/map/
-* ArcGIS JavaScript API
-* Clients build their own data catalogues
+* Clients build their own data catalogues in our reporting tools
+* Easy to use, responsive mapping app allowing the end users to view their data as maps
+* Allows the end user to select an indicator from the catalogue and map it at the different available geographies
+* Features - Time series, classification, smart mapping
+* ArcGIS JavaScript API + Modular JavaScript + Grunt + NPM
+* Configurable as an ArcGIS Online App
+* Embeddable in wordpress website
+
+### Data Catalogue Explorer
+* https://hubtest.instantatlas.com/datastore2/?appid=42ec835a6ff04a9d9566d29795c7843a
+* Responsive app for viewing information about indicators stored in data catalogue
+* Configurable as an ArcGIS Online App
+
+### InstantAtlas desktop
+* Desktop reimagined
+
 
 
 ## Coding
