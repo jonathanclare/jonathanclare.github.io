@@ -78,7 +78,7 @@
 * React, Redux, React Router, SASS, Responsive Design
 
 ### ECDC
-
+* ECDC were looking for ways to improve the availability and accessibility of their data. I spent several months consulting with a group from ECDC to create a bespoke version of our software for their Surveillance Atlas of Infectious Diseases. The work involved customizing and integrating InstantAtlas Destop with backend GIS and REST API services hosted by ECDC, plus training of their in-house developers.
 
 ## Coding
 
