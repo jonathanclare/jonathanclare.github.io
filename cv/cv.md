@@ -1,14 +1,14 @@
 Jonathan Clare
 ======
 
-16/15 Tay Street</br>
-Edinburgh</br>
+16/15 Tay Street<br/>
+Edinburgh<br/>
 EH111EB
 
-**Email** [jonathan.david.clare@gmail.com](mailto:jonathan.david.clare@gmail.com)</br>
-**Web** [https://jonathanclare.github.io/](https://jonathanclare.github.io/)</br>
-**GitHub** [https://github.com/jonathanclare](https://github.com/jonathanclare)</br>
-**Date of Birth** 03/11/74</br>
+**Email** [jonathan.david.clare@gmail.com](mailto:jonathan.david.clare@gmail.com)<br/>
+**Web** [https://jonathanclare.github.io/](https://jonathanclare.github.io/)<br/>
+**GitHub** [https://github.com/jonathanclare](https://github.com/jonathanclare)<br/>
+**Date of Birth** 03/11/74<br/>
 **Nationality** British
 
 I currently work at [GeoWise Ltd](https://www.instantatlas.com/) as a senior developer, designing and developing highly interactive, data rich web apps with a focus on data visualisation and mapping. I have over 20 years experience working in the GIS and Web Development fields. For examples of my work please see my webpage at [https://jonathanclare.github.io/](https://jonathanclare.github.io/) 
@@ -16,24 +16,23 @@ I currently work at [GeoWise Ltd](https://www.instantatlas.com/) as a senior dev
 Proficient in
 ------
 
-**Coding** React, React Router, Redux, JavaScript, ES6, JSON, Web App Development, Electron, Grunt, JQuery, Handlebars, Object Oriented Design, Modular Design</br>
-**Web**  HTML, CSS, LESS, SASS, Responsive Design, CSS Flexbox, Bootstrap</br>
-**Data Visualisation** SVG, HTML5 Canva</br> 
-**GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API</br>
+**Coding** React, React Router, Redux, JavaScript, ES6, JSON, Web App Development, Electron, Grunt, JQuery, Handlebars, Object Oriented Design, Modular Design<br/>
+**Web**  HTML, CSS, LESS, SASS, Responsive Design, CSS Flexbox, Bootstrap<br/>
+**Data Visualisation** SVG, HTML5 Canva<br/> 
+**GIS** ArcGIS JavaScript API, ArcGIS REST API, Google Maps JavaScript API<br/>
 **Source Control** GitHub, Microsoft Team Foundation Server
 
 Basic understanding of
 ------
 
-**Coding** Python</br>
+**Coding** Python, PHP<br/>
 **Image Editors** GIMP  
 
 Prior experience working with
 ------
 
-**Coding** Java, JSP, ASP, XML, XSL</br>
-**Data Visualisation** ActionScript, Flex, Tcl/Tk</br>
-**GIS** ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi</br>
+**Coding** Java, JSP, ASP, XML, XSL, ColdFusion, Tcl/Tk, ActionScript, Flex<br/>
+**GIS** ArcInfo, ARC Macro Language, ArcView, Avenue, ArcIMS, Idrisi<br/>
 **Relational database design and development** SQL, Access  
 
 Employment
