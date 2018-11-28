@@ -90,7 +90,7 @@
 * JavaScript (modular pattern, immediately invoked functions) 
 * JQuery, JSON, LESS, HTML5 Canvas, Responsive Design
 * Packaging, Node, NPM, Grunt
-* ES6, React, Redux, React Router, SASS
+* ES6, React, Redux, React Router, SASS, Travis CI, Testing (Jest)
 
 ### JavaScript Common Errors
 * undefined | 0 | null | "undefined" | "null" 
@@ -115,7 +115,11 @@
 * Password confusion - having to contact HQ for new password too often
 * Confusion over Microsoft accounts - personal vs work email
 
-## Notes App
+### Notes App Comments
 
 
-## Dev Questions
+### Dev Questions
+
+### Weaknesse
+* Testing - light bulb moment - instead of throwing away debugging turn them into tests - realised I was already testing but throwing away the tests
+* Never did a CS degree so still get the occassional blank moment
