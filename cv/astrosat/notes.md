@@ -1,4 +1,11 @@
 
+## Academic
+* School in St Helens
+* Undergraduate geography degree in Glasgow
+* Exchange in Canada - first experienced computers, email, internet, computers and GIS.
+* Msc in GIS at Leicester - inclination towards the programming side of things
+* Dissertation - build dashboards using Tcl/Tk to map and chart indicators
+
 ## Career
 
 * Mapix technologies - Built company website. Wrote Avenue scripts in ArcView 3.0 to process and package large hydrographic datasets as shapefiles
@@ -27,6 +34,7 @@
 * Aquired by ESRI.
 
 ### Online Dashboard Builder - move to the cloud
+* Started hearing about Node and package management
 * Tie in with ESRI software - Data Storage using ArcGis Online
 * Online version of IA Desktop. Enable clients to configure, style and save their dashboards online. 
 * Data stored as feature services in ArcGIS Online.
@@ -34,31 +42,54 @@
 * Integrate legacy dashboard code.
 
 ### Reporting Tools
-* Company at this time was building more complex reporting tools. 
 * Combined all reporting tools into Online Offering
 * Clients have trouble sourcing and storing their data
-* Build up data catalogue in ArcGIS Online - mastertable stored as feature service. 
-* Combine reporting tools and webapps behind a wordpress front end allowing clients to configure at the wordpress level.
+* Combine reporting tools and webapps behind a wordpress front end allowing clients to configure at the wordpress level
+* Clients build their own data catalogues (stored as feature services in ArcGIS Online) using our reporting tools
+
+### InstantAtlas desktop (electron)
+* https://online.instantatlas.com/designer/
+* Desktop reimagined
+* Electron, Modular JavaScript Design, JQuery, Grunt, Handlebars, LESS
+* Got binned after pivot away from supporting desktop
+* Complicated getting off the ground - lots idiosyncracies and wrinkles still need iron out.
 
 ### Map Explorer
 * https://www.suffolkobservatory.info/economy-employment/map/
-* Clients build their own data catalogues in our reporting tools
-* Easy to use, responsive mapping app allowing the end users to view their data as maps
+* Easy to use, responsive mapping app allowing the end users to view the indicators in their data catalogue as maps
 * Allows the end user to select an indicator from the catalogue and map it at the different available geographies
 * Features - Time series, classification, smart mapping
-* ArcGIS JavaScript API + Modular JavaScript + Grunt + NPM
 * Configurable as an ArcGIS Online App
+* Can be launched from URL with data model passed in as params or programmatically with a json data model passed in
 * Embeddable in wordpress website
+* ArcGIS JavaScript API + Modular JavaScript + Grunt + NPM
+
+### Google Maps Raster
+* https://jonathanclare.github.io/react-map/
+* Waiting for JavaScript framework winner - plumped for react
+* Built in order to learn React / ES6
+* Generate DEMs using googles ElevationService - store points as raster class and render using HTML5 - add generated hHTML5 canvas as new layer to Google maps
+* Add algorithms for deriving new layers from Raster Class - aspect, slope, hillshade
 
 ### Data Catalogue Explorer
 * https://hubtest.instantatlas.com/datastore2/?appid=42ec835a6ff04a9d9566d29795c7843a
 * Responsive app for viewing information about indicators stored in data catalogue
 * Configurable as an ArcGIS Online App
+* Embeddable in wordpress website
+* React, Redux, React Router, SASS, Responsive Design
 
-### InstantAtlas desktop
-* Desktop reimagined
+### ECDC
 
 
+### Front end evolution
+* HTML, CSS, JavaScript (simple functions)
+* ASP, JSP, SVG
+* Actionscript, FLEX
+* JavaScript (prototypal inheritence pattern)
+* JavaScript (modular pattern, immediately invoked functions) 
+* JQuery, JSON, LESS, Responsive Design
+* Packaging, Node, NPM, Grunt
+* ES6, React, Redux, React Router, SASS
 
 ## Coding
 
@@ -78,16 +109,6 @@
 * javascript prototypal inheritance - clunky workaround - mostly solved by ES6
 * Weakly typed - Not catching strings being passed in as numbers - leads to numbers being concatednated strings
 
-### Evolution
-
-### NPM | Grunt| Node
-
-### ES6 | React | Redux
-
-### React | Redux
-
-## Work Flow
-
 ### Visual Studio Issues
 
 * Visual Studio builds - works on one computer not on another
@@ -99,23 +120,8 @@
 
 
 
-### InstantAtlas Desktop
-
-### InstantAtlas Desktop
-
-### Dashboard Builder
-
-### Vodafone
-
-### ECDC
-
-
-
 ## Notes App
 
 
-## Other
-
-### Raster Mapper
 
 ## Questions
