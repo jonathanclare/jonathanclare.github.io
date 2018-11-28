@@ -243,6 +243,7 @@ export const getNote = (state , id) =>
 * Attention to detail
 * Good communicator
 * Lots of experience working on projects with clients
+* Experience working within a multidisciplinary team - develpers, support & testing, data guys
 
 ## Weaknesses
 * Testing - light bulb moment - instead of throwing away debugging turn them into tests - realised I was already testing but throwing away the tests
@@ -256,6 +257,7 @@ export const getNote = (state , id) =>
 * Kitesurfing in warmer months 
 * Snowboard in Winter
 * Walking
+* Learning Portuguese
 
 ## Dev Questions
 * Could you tell me more about the makeup of the development team and my role in it
@@ -267,6 +269,6 @@ export const getNote = (state , id) =>
 ## Admin Questions
 * Looking for a secure long term position - interested in future plans for the business - what is the direction?
 * What are some of the biggest challenges/successes youre facing
-* Can you tell me something about the general culture of the company and the workplace
+* Can you tell me something about the general culture of the company and the workplace - life-work balance
 * Showering facilities
 * What is the usual time frame for making the hiring decision
