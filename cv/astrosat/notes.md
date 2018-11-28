@@ -1,3 +1,45 @@
+
+## Career
+
+* Mapix technologies - Built company website. Wrote Avenue scripts in ArcView 3.0 to process and package large hydrographic datasets as shapefiles
+* Scottish Wildlife Trust - GIS Support Officer for mapping of wildlife sites, set up system using ArcView 3.0 for entering and storing wildlife sites in ArcView
+* Forest Research - Created an ArcView 3.0 extension for the Ecological Site Classification - Inputs temperature, moisture deficit, continentality, windiness rasters, generated a suitablilty raster for different tree species. Created a protype Java Applet to do the same - technology wasnt mature enough to roll out - no champion with Forestry Commission to implement in FC GIS System
+
+## Geowise
+
+### Early
+* Initially hired as GIS Support / Consultant
+* General support and consultancy work for bids that we'd won - Scottish Enterprise
+* Gradually evolved into develpoment role
+* Built mapping sites using ESRI ArcIMS - ASP and JSP flavours
+* Designed first dashboards for clients using SVG on an ad hoc basis. Lots of functions - no modules - data stored in something very similar to JSON
+* More and more dashboards being created - greater difficulty in winning bids - decided to build product.
+
+### InstantAtlas Desktop
+* InstantAtlas Desktop created so clients could create and customize their own dashboards using our templates. Clients use excel to create their attribute data and select the shapefiles they wish to use as map layers. They then use desktop tols to design and style their dashboards. Desktop software pumps out XML data and configuration files (no JSON at this time) and a stylesheet - this is picked up by client side app template built on JavaScript and SVG.
+* Flash - more mature technology - faster than SVG
+* Contractor brought on board - lacked domain knowledge - ended up with templates none of the inhouse develpers could use
+* Redeveloped templates with actionscript within the FLEX framework (object oriented)
+* IPAD released - doesnt support Flash
+* Redevelop templates using JavaScript (JavaScript prototypal inheritance pattern), JQuery and HTML5 Canvas / SVG. Switched to JSON for data files.
+* Support for thematics being overlayed over google maps
+* Lots of custom work required by clients so code evolved to allow customisation through an API: ECDC, Vodafone, NHS, Data Observatories, Many government agencies
+* Aquired by ESRI.
+
+### Move to cloud
+* Tie in with ESRI software - Data Storage using ArcGis Online
+* Online Dashboard Builder created - Online version of IA Desktop. Enable clients to configure, style and save their dashboards online. Started looking at available tools. Package management, Node, NPM, JavaScript (JavaScript Module pattern), LESS, GRUNT. Data stored as feature services in ArcGIS Online.
+* Company at this time was bulding more complex reporting tools. 
+* Combined all reporting tools into Online Offering
+* Clients have trouble sourcing and storing their data
+* Build up data store in ArcGIS Online - mastertable storesd as feature service. Combine reporting tools and webapps behind a wordpress front end allowing clients to configure at the wordpress level.
+
+### Map Explorer
+* https://www.suffolkobservatory.info/economy-employment/map/
+* ArcGIS JavaScript API
+* Clients build their own data catalogues
+
+
 ## Coding
 
 ### JavaScript Common Errors
@@ -16,7 +58,7 @@
 * javascript prototypal inheritance - clunky workaround - mostly solved by ES6
 * Weakly typed - Not catching strings being passed in as numbers - leads to numbers being concatednated strings
 
-### JQuery and Modular Javascript
+### Evolution
 
 ### NPM | Grunt| Node
 
@@ -36,20 +78,6 @@
 * Confusion over Microsoft accounts - personal vs work email
 
 
-## Career
-
-* Mapix technologies - Built company website. Wrote Avenue scripts in ArcView 3.0 to process and package large hydrographic datasets as shapefiles
-* Scottish Wildlife Trust - GIS Support Officer for mapping of wildlife sites, set up system using ArcView 3.0 for entering and storing wildlife sites in ArcView
-* Forest Research - Created an ArcView 3.0 extension for the Ecological Site Classification - Inputs temperature, moisture deficit, continentality, windiness rasters, generated a suitablilty raster for different tree species. Created a protype Java Applet to do the same - technology wasnt mature enough to roll out - no champion with Forestry Commission to implement in FC GIS System
-
-## Geowise
-
-* Initially hired as GIS Support / Consultant
-* Built mapping sites using ESRI ArcIMS - ASP and JSP flavours
-* Role gradually switched to more heavy development
-* Designed first dashboards for clients using SVG on an ad hoc basis
-* InstantAtlas Desktop created so clients could create and customize their own dashboards using our templates
-* Dashboard Builder created. 
 
 ### InstantAtlas Desktop
 
