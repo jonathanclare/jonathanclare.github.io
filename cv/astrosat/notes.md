@@ -54,14 +54,14 @@
 * Clients build their own data catalogues (stored as feature services in ArcGIS Online) using our reporting tools
 
 #### InstantAtlas desktop (electron)
-https://online.instantatlas.com/designer/
+* https://online.instantatlas.com/designer/
 * Desktop reimagined
 * Electron, Modular JavaScript Design, JQuery, Grunt, Handlebars, LESS
 * Got binned after pivot away from supporting desktop
 * Complicated getting off the ground - lots idiosyncracies and wrinkles still need iron out.
 
 #### Map Explorer
-https://www.suffolkobservatory.info/economy-employment/map/
+* https://www.suffolkobservatory.info/economy-employment/map/
 * Easy to use, responsive mapping app allowing the end users to view the indicators in their data catalogue as maps
 * Allows the end user to select an indicator from the catalogue and map it at the different available geographies
 * Features - Time series, classification, smart mapping
@@ -71,7 +71,7 @@ https://www.suffolkobservatory.info/economy-employment/map/
 * ArcGIS JavaScript API + Modular JavaScript + Grunt + NPM
 
 #### Data Catalogue Explorer
-https://hubtest.instantatlas.com/datastore2/?appid=42ec835a6ff04a9d9566d29795c7843a
+* https://hubtest.instantatlas.com/datastore2/?appid=42ec835a6ff04a9d9566d29795c7843a
 * Responsive app for viewing information about indicators stored in data catalogue
 * Configurable as an ArcGIS Online App
 * Embeddable in wordpress website
@@ -79,7 +79,7 @@ https://hubtest.instantatlas.com/datastore2/?appid=42ec835a6ff04a9d9566d29795c78
 * Just started Travis CI and testing with JEST
 
 ## Case study: ECDC Surveillance Atlas of Infectious Diseases
-https://atlas.ecdc.europa.eu/public/index.aspx
+* https://atlas.ecdc.europa.eu/public/index.aspx
 * ECDC were looking for ways to improve the availability and accessibility of their data. I spent several months consulting with a group from ECDC to create a bespoke version of our software for their Surveillance Atlas of Infectious Diseases. The work involved customizing and integrating InstantAtlas Destop with backend GIS and REST API services hosted by ECDC, plus training of their in-house developers.
 * Data REST Api and GIS services were evolving at the same time as the App
 * Problems gaining access to services as everything was evolving in-house, sensitivity of data
@@ -103,20 +103,20 @@ https://atlas.ecdc.europa.eu/public/index.aspx
 * Rover controlled from phone over WIFI using calls to REST API.
 
 #### Google Maps Raster
-https://jonathanclare.github.io/react-map/
+* https://jonathanclare.github.io/react-map/
 * Waiting for JavaScript framework winner - plumped for react
 * Built in order to learn React / ES6
 * Generate DEMs using googles ElevationService - store points as raster class and render using HTML5 Canvas - add canvas as new layer to Google maps
 * Add algorithms for deriving new layers from Raster Class - aspect, slope, hillshade
 
 #### Quinta de Vodra
-http://quintadevodra.com/
+* http://quintadevodra.com/
 * My partners parents Farm in Portugal
 * Minimalist responsive site that could be updated with basic knowledge of HTML 
 * Set up google account and redirect of URLs and Email, plus masses of documentation so they could update everything themselves
 
 #### Snow scotland
-http://jonathanclare.github.io/ski.html
+* http://jonathanclare.github.io/ski.html
 * I wanted all the information about skiing in scotland in one place
 * Had to be responsive and lightweight - as would be used mostly on mobile
 * Added page for each ski area
@@ -170,7 +170,7 @@ http://jonathanclare.github.io/ski.html
 * One way binding + central data store + routing = godsend
 
 #### Improvements
-https://jonathanclare.github.io/astrosat-notes-app/
+* https://jonathanclare.github.io/astrosat-notes-app/
 * Fix the routing 404 issue
 * Add support for older browsers?
 * Refactor css
