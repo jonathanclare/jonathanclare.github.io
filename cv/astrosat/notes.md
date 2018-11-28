@@ -63,6 +63,38 @@
 * Embeddable in wordpress website
 * ArcGIS JavaScript API + Modular JavaScript + Grunt + NPM
 
+### Data Catalogue Explorer
+* https://hubtest.instantatlas.com/datastore2/?appid=42ec835a6ff04a9d9566d29795c7843a
+* Responsive app for viewing information about indicators stored in data catalogue
+* Configurable as an ArcGIS Online App
+* Embeddable in wordpress website
+* React, Redux, React Router, SASS, Responsive Design
+* Just started Travis CI and testing with JEST
+
+### Case study: ECDC Surveillance Atlas of Infectious Diseases
+* https://atlas.ecdc.europa.eu/public/index.aspx
+* ECDC were looking for ways to improve the availability and accessibility of their data. I spent several months consulting with a group from ECDC to create a bespoke version of our software for their Surveillance Atlas of Infectious Diseases. The work involved customizing and integrating InstantAtlas Destop with backend GIS and REST API services hosted by ECDC, plus training of their in-house developers.
+* Data REST Api and GIS services were evolving at the same time as the App
+* Problems gaining access to services as everything was evolving in-house, sensitivity of data
+* Build relationships with in-house DEVELOPERS - they didnt feel they had ownership of the tool
+* Build relationships with in-house GIS developers and analysts - they werent happy about not building on ESRI tools.
+* Weekly meetings
+* Exacting specifications
+* Dealing with politics within the organisation
+* Couple of on site visits to Stockholm
+* Multiple Stakeholders
+* Meetings with individual stakeholders
+* In-house developers had to be able to understand and make cahanges to end product
+* Product still in use years later - has since been heavily modified by in-house developers
+
+### Side projects
+
+### Raspbery Pi
+* Built a Rover (For Alex)
+* Learnt Python to commicate with Pi and built a REST API served using Flask
+* Built front end using JavaScript - remote control interface
+* Rover controlled from phone over WIFI using calls to REST API.
+
 ### Google Maps Raster
 * https://jonathanclare.github.io/react-map/
 * Waiting for JavaScript framework winner - plumped for react
@@ -70,15 +102,13 @@
 * Generate DEMs using googles ElevationService - store points as raster class and render using HTML5 - add generated hHTML5 canvas as new layer to Google maps
 * Add algorithms for deriving new layers from Raster Class - aspect, slope, hillshade
 
-### Data Catalogue Explorer
-* https://hubtest.instantatlas.com/datastore2/?appid=42ec835a6ff04a9d9566d29795c7843a
-* Responsive app for viewing information about indicators stored in data catalogue
-* Configurable as an ArcGIS Online App
-* Embeddable in wordpress website
-* React, Redux, React Router, SASS, Responsive Design
-
-### ECDC
-* ECDC were looking for ways to improve the availability and accessibility of their data. I spent several months consulting with a group from ECDC to create a bespoke version of our software for their Surveillance Atlas of Infectious Diseases. The work involved customizing and integrating InstantAtlas Destop with backend GIS and REST API services hosted by ECDC, plus training of their in-house developers.
+### Snow scotland
+http://jonathanclare.github.io/ski.html
+* I wanted all the information about skiing in scotland in one place
+* Had to be responsive and lightweight - as would be used mostly on mobile
+* Added page for each ski area
+* Added twitter and facebook feeds
+* Links to weather and avalanche conditions info
 
 ## Coding
 
@@ -115,11 +145,16 @@
 * Password confusion - having to contact HQ for new password too often
 * Confusion over Microsoft accounts - personal vs work email
 
+
 ### Notes App Comments
 
 
+
+### Weaknesses
+* Testing - light bulb moment - instead of throwing away debugging turn them into tests - realised I was already testing but throwing away the tests
+* Never did a CS degree so still get the occassional "Should I know that"
+* Very front end / creative leaning - like to create things with the tools given to me - weaker on system administration side of things
+* Domain knowledge - can be learned
+
 ### Dev Questions
 
-### Weaknesse
-* Testing - light bulb moment - instead of throwing away debugging turn them into tests - realised I was already testing but throwing away the tests
-* Never did a CS degree so still get the occassional blank moment
