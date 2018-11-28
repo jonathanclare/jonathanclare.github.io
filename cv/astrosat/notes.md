@@ -259,11 +259,14 @@ export const getNote = (state , id) =>
 
 ## Dev Questions
 * Could you tell me more about the makeup of the development team and my role in it
+* Who would be my direct supervisor
 * Do you have any examples of recent projects youve worked on
 * Besides onboarding what would I be working on
-* Id like to push forward with ES6, HTML5 Canvas, SVG and React - do you use that in-house
+* I'd like to push forward with ES6, HTML5 Canvas, SVG and React - do you use that in-house
 
 ## Admin Questions
-* Looking for a secure long term position - future plans for the business - what is the direction?
-* Pension contributions
+* Looking for a secure long term position - interested in future plans for the business - what is the direction?
+* What are some of the biggest challenges/successes youre facing
+* Can you tell me something about the general culture of the company and the workplace
 * Showering facilities
+* What is the usual time frame for making the hiring decision
